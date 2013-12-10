@@ -1,0 +1,28 @@
+{
+	"name" : "florianbelhomme/foundationdemo",
+	"description" : "Show the possibilities of FoundationBundle.",
+	"type" : "symfony-bundle",
+	"authors" : [{
+			"name" : "Florian BELHOMME",
+			"email" : "contact@florianbelhomme.com",
+			"homepage" : "http://florianbelhomme.com"
+		}
+	],
+	"keywords" : [
+		"foundation"
+	],
+	"license" : [
+		"MIT"
+	],
+	"require" : {
+		"florianbelhomme/foundationdemo" : "dev-master",
+		"symfony/symfony" : ">=2.3",
+		"php" : ">=5.3.3"
+	},
+	"autoload" : {
+		"psr-0" : {
+			"FlorianBelhomme\\Bundle\\FoundationDemoBundle" : ""
+		}
+	},
+	"target-dir" : "FlorianBelhomme/Bundle/FoundationDemoBundle"
+}
