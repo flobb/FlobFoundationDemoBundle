@@ -3,9 +3,10 @@
 	"description" : "Show the possibilities of FoundationBundle.",
 	"type" : "symfony-bundle",
 	"authors" : [{
-			"name" : "Florian BELHOMME",
+			"name" : "Florian Belhomme",
 			"email" : "contact@florianbelhomme.com",
-			"homepage" : "http://florianbelhomme.com"
+			"homepage" : "http://florianbelhomme.com",
+			"role" : "Developer"
 		}
 	],
 	"keywords" : [
