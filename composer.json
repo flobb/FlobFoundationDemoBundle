@@ -1,5 +1,5 @@
 {
-	"name" : "florianbelhomme/foundationdemo",
+	"name" : "florianbelhomme/foundation-demo-bundle",
 	"description" : "Show the possibilities of FoundationBundle.",
 	"type" : "symfony-bundle",
 	"authors" : [{
@@ -16,8 +16,8 @@
 	],
 	"require" : {
 		"symfony/symfony" : ">=2.3",
-		"php" : ">=5.3.3",
-		"florianbelhomme/foundation" : "dev-master"
+		"florianbelhomme/foundation-bundle" : "dev-master",
+		"php" : ">=5.3.3"
 	},
 	"autoload" : {
 		"psr-0" : {
