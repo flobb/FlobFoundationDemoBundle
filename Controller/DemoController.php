@@ -4,6 +4,8 @@ namespace FlorianBelhomme\Bundle\FoundationDemoBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+use FlorianBelhomme\Bundle\FoundationDemoBundle\Form\Type\KitchensinkType;
+
 class DemoController extends Controller
 {
     public function kitchensinkAction(Request $request)
