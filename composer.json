@@ -15,9 +15,9 @@
 		"MIT"
 	],
 	"require" : {
-		"florianbelhomme/foundationdemo" : "dev-master",
 		"symfony/symfony" : ">=2.3",
-		"php" : ">=5.3.3"
+		"php" : ">=5.3.3",
+		"florianbelhomme/foundation" : "dev-master"
 	},
 	"autoload" : {
 		"psr-0" : {
