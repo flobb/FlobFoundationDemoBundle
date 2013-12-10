@@ -24,5 +24,6 @@
 		"psr-0" : {
 			"FlorianBelhomme\\Bundle\\FoundationDemoBundle" : ""
 		}
-	}
+	},
+	"target-dir" : "FlorianBelhomme/Bundle/FoundationDemoBundle"
 }
