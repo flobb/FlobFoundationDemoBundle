@@ -1,20 +1,22 @@
-<!DOCTYPE html>
-    <!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
-    <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>{{ title }}</title>
-        <link rel="stylesheet" href="{{ asset('bundles/soluneadminscaffolding/css/foundation-v4.2.1.min.css') }}" />
-        <link rel="stylesheet" href="{{ asset('bundles/soluneadminscaffolding/css/normalize.css') }}" />
-        <link rel="stylesheet" href="{{ asset('bundles/soluneadminscaffolding/css/font-awesome.min.css') }}" />
-        <link rel="stylesheet" href="{{ asset('bundles/soluneadminscaffolding/css/datatables.css') }}" />
-        <link rel="stylesheet" href="{{ asset('bundles/soluneadminscaffolding/css/datatables-foundation.css') }}" />
-        <link rel="stylesheet" href="{{ asset('bundles/soluneadminscaffolding/css/app.css') }}" />
-    </head>
-    <body>
-      
+{% extends '::base.html.twig' %}
+
+
+{% block title %}Foundation Demo - Kitchen sink{% endblock %}
+
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.0.2/css/normalize.min.css" type="text/css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.0.2/css/foundation.min.css" type="text/css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('bundles/florianbelhommefoundation/css/foundationtosymfony.css') }}" type="text/css" />
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+{% endblock %}
+
+
+{% block body %}
+        
+        {{ knp_menu_render('topmenu') }}
+        
         <div class="row">
           <div class="large-12 columns">
             <p>
@@ -204,10 +206,12 @@ nunc. Morbi imperdiet augue
         </div>
         
         {{ form(form) }}
-    
-        <script>
-            $(document).foundation();
-        </script>
-        
-    </body>
-</html>
+
+{% endblock %}
+
+
+{% block javascripts %}
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.0.2/js/foundation.min.js"></script>
+	<script type="text/javascript" src="{{ asset('bundles/florianbelhommefoundation/js/foundationtosymfony.js') }}"></script>
+{% endblock %}
