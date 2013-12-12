@@ -1,0 +1,14 @@
+services:
+
+    fbfdb.menu_builder:
+        class: FlorianBelhomme\Bundle\FoundationDemoBundle\Menu\MenuBuilder
+        arguments: [@knp_menu.factory]
+
+    fbfdb.menu.topmenu:
+        class: Knp\Menu\Item
+        factory_service: fbfdb.menu_builder
+        factory_method: createTopMenu
+        arguments: [@request]
+        scope: request
+        tags:
+            - { name: knp_menu.menu, alias: topmenu }

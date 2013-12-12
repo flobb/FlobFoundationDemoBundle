@@ -17,7 +17,10 @@
 	],
 	"require" : {
 		"symfony/symfony" : ">=2.3",
+		"knplabs/knp-paginator-bundle" : "dev-master",
+		"knplabs/knp-menu" : "2.0.*@dev",
 		"florianbelhomme/foundation-bundle" : "dev-master",
+		"knplabs/knp-menu-bundle" : "dev-master",
 		"php" : ">=5.3.3"
 	},
 	"autoload" : {
