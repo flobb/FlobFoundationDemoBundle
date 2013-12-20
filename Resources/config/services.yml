@@ -12,3 +12,12 @@ services:
         scope: request
         tags:
             - { name: knp_menu.menu, alias: topmenu }
+
+    fbfdb.menu.sidebar:
+        class: Knp\Menu\Item
+        factory_service: fbfdb.menu_builder
+        factory_method: createSidebar
+        arguments: [@request]
+        scope: request
+        tags:
+            - { name: knp_menu.menu, alias: sidebar }
