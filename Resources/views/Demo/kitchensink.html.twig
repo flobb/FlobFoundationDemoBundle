@@ -32,33 +32,33 @@
         </div>
         
         <div class="row">
-          <div class="large-12 columns"><div class="panel"><p>Panel 12 columns</p></div></div>
+          <div class="small-12 large-12 columns"><div class="panel"><p>Panel 12 columns</p></div></div>
         </div>
         
         <div class="row">
-          <div class="large-6 columns"><div class="panel"><p>6 columns</p></div></div>
-          <div class="large-6 columns"><div class="panel"><p>6 columns</p></div></div>
+          <div class="small-6 large-6 columns"><div class="panel"><p>6 columns</p></div></div>
+          <div class="small-6 large-6 columns"><div class="panel"><p>6 columns</p></div></div>
         </div>
         
         <div class="row">
-          <div class="large-3 columns"><div class="panel"><p>3 columns</p></div></div>
-          <div class="large-3 columns"><div class="panel"><p>3 columns</p></div></div>
-          <div class="large-3 columns"><div class="panel"><p>3 columns</p></div></div>
-          <div class="large-3 columns"><div class="panel"><p>3 columns</p></div></div>
+          <div class="small-3 large-3 columns"><div class="panel"><p>3 columns</p></div></div>
+          <div class="small-3 large-3 columns"><div class="panel"><p>3 columns</p></div></div>
+          <div class="small-3 large-3 columns"><div class="panel"><p>3 columns</p></div></div>
+          <div class="small-3 large-3 columns"><div class="panel"><p>3 columns</p></div></div>
         </div>
         
         <div class="row">
-          <div class="large-2 columns"><div class="panel"><p>2 columns</p></div></div>
-          <div class="large-2 columns"><div class="panel"><p>2 columns</p></div></div>
-          <div class="large-2 columns"><div class="panel"><p>2 columns</p></div></div>
-          <div class="large-2 columns"><div class="panel"><p>2 columns</p></div></div>
-          <div class="large-2 columns"><div class="panel"><p>2 columns</p></div></div>
-          <div class="large-2 columns"><div class="panel"><p>2 columns</p></div></div>
+          <div class="small-2 large-2 columns"><div class="panel"><p>2 columns</p></div></div>
+          <div class="small-2 large-2 columns"><div class="panel"><p>2 columns</p></div></div>
+          <div class="small-2 large-2 columns"><div class="panel"><p>2 columns</p></div></div>
+          <div class="small-2 large-2 columns"><div class="panel"><p>2 columns</p></div></div>
+          <div class="small-2 large-2 columns"><div class="panel"><p>2 columns</p></div></div>
+          <div class="small-2 large-2 columns"><div class="panel"><p>2 columns</p></div></div>
         </div>
         
         <div class="row">
-          <div class="large-2 columns"><div class="panel"><p>2 columns</p></div></div>
-          <div class="large-8 large-offset-2 columns"><div class="panel"><p>8 columns, offset 2</p></div></div>
+          <div class="small-2 large-2 columns"><div class="panel"><p>2 columns</p></div></div>
+          <div class="small-8 small-offset-2 large-8 large-offset-2 columns"><div class="panel"><p>8 columns, offset 2</p></div></div>
         </div>
         
         <div class="row">
@@ -91,9 +91,19 @@
         
         <div class="row">
           <div class="large-12 columns">
-            <h3>Menus & sidebar</h3>
+            <h3>Menus & sidebar (Using KNP Menu)</h3>
+            <h4>Top menu</h4>
             {{ knp_menu_render('topmenu') }}
+            <br>
+            <h4>Side menu</h4>
             {{ knp_menu_render('sidebar') }}
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="large-12 columns">
+            <h3>Pagination (Using KNP Paginator)</h3>
+            {{ knp_pagination_render(pagination) }}
           </div>
         </div>
         
