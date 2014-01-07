@@ -1,6 +1,6 @@
 {
 	"name" : "florianbelhomme/foundation-demo-bundle",
-	"description" : "Show the possibilities of FoundationBundle.",
+	"description" : "Provides a kitchen sink (exemples) of the functionnalities of the florianbelhomme/foundation-bundle bundle.",
 	"type" : "symfony-bundle",
 	"authors" : [{
 			"name" : "Florian Belhomme",
@@ -18,7 +18,7 @@
 	"require" : {
 		"symfony/symfony" : ">=2.3",
 		"knplabs/knp-paginator-bundle" : ">=2.3.3",
-		"florianbelhomme/foundation-bundle" : "dev-master",
+		"florianbelhomme/foundation-bundle" : ">=1.0",
 		"knplabs/knp-menu-bundle" : ">=1.1.2",
 		"php" : ">=5.3.3"
 	},
