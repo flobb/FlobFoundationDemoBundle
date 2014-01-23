@@ -39,6 +39,15 @@ class AppKernel extends Kernel
 }
 ```
 
+`app/config/routing.yml`
+```YAML
+demo:
+    resource: "@FlorianBelhommeFoundationDemoBundle/Resources/config/routing.yml"
+    prefix:   /foundation
+```
+
+Then go to /foundation/
+
 ## License
 
 - This bundle is licensed under the [MIT License](http://opensource.org/licenses/MIT)
