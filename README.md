@@ -2,7 +2,7 @@
 
 By [Florian Belhomme](http://florianbelhomme.com)
 
-See [FoundationBundle](https://github.com/florianbelhomme/FoundationBundle)
+See [FoundationBundle](https://github.com/florianbelhomme/FoundationBundle) for more infos and issues.
 
 ## Install
 
