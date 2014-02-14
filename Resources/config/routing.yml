@@ -1,3 +1,11 @@
-fb_foundation_demo:
+showcase_homepage:
     path:      /
-    defaults:  { _controller: FlorianBelhommeFoundationDemoBundle:Demo:Kitchensink }
+    defaults:  { _controller: FlorianBelhommeFoundationDemoBundle:Demo:Showcase }
+
+showcase_level1:
+    path:      /level1/
+    defaults:  { _controller: FlorianBelhommeFoundationDemoBundle:Demo:Showcase }
+    
+showcase_level2:
+    path:      /level1/level2/
+    defaults:  { _controller: FlorianBelhommeFoundationDemoBundle:Demo:Showcase }
