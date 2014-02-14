@@ -10,7 +10,7 @@ use FlorianBelhomme\Bundle\FoundationDemoBundle\Form\Type\KitchensinkType;
 
 class DemoController extends Controller
 {
-    public function kitchensinkAction(Request $request)
+    public function showcaseAction(Request $request)
     {
         
         // Form to show all possibilities
@@ -27,7 +27,7 @@ class DemoController extends Controller
         $paginator = $this->get('knp_paginator');
         $pagination = $paginator->paginate(range(0, 100), $this->get('request')->query->get('page', 1), 10);
         
-        return $this->render('FlorianBelhommeFoundationDemoBundle:Demo:kitchensink.html.twig', array(
+        return $this->render('FlorianBelhommeFoundationDemoBundle:Demo:showcase.html.twig', array(
             'form' => $form->createView(),
             'pagination' => $pagination
         ));
