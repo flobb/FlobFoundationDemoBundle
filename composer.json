@@ -20,11 +20,12 @@
 		"MIT"
 	],
 	"require" : {
+	    "php" : ">=5.3.3",
 		"symfony/symfony" : ">=2.3",
-		"knplabs/knp-paginator-bundle" : ">=2.3.3",
-		"florianbelhomme/foundation-bundle" : ">=1.0.1",
-		"knplabs/knp-menu-bundle" : "1.1.*",
-		"php" : ">=5.3.3"
+		"knplabs/knp-paginator-bundle" : "2.4.0",
+		"knplabs/knp-menu" : "1.1.2",
+		"knplabs/knp-menu-bundle" : "1.1.2",
+		"florianbelhomme/foundation-bundle" : "1.0.3"
 	},
 	"autoload" : {
 		"psr-0" : {
