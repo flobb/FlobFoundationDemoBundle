@@ -13,9 +13,9 @@ class DemoController extends Controller
     public function showcaseAction(Request $request)
     {
         
-        // Form to show all possibilities
+        // Demo form to show all potential
         $form = $this->createForm(new KitchensinkType());
-        $form->bind(array(
+        $form->submit(array(
             'textDisabled'      => 'Disabled text',
             'radio'             => 3,
             'checkbox_disabled' => array(1)

@@ -32,7 +32,10 @@ class KitchensinkType extends AbstractType
         $builder->add('radio_disabled',     'choice',   array('label' => 'Radio disabled', 'choices' => array(1 => 'Yoda'), 'multiple' => false, 'expanded' => true, 'disabled' => true));
         $builder->add('checkbox',           'choice',   array('label' => 'Checkbox', 'choices' => array(1 => 'Choice 1', 2 => 'Choice 2', 3 => 'Obi wan kenobi'), 'required' => true, 'multiple' => true, 'expanded' => true));
         $builder->add('checkbox_disabled',  'choice',   array('label' => 'Checkbox disabled', 'choices' => array(1 => 'Yoda'), 'data' => array(1), 'multiple' => true, 'expanded' => true, 'disabled' => true));
-        
+
+        // Slider
+        $builder->add('slider',             'slider', array('label' => 'Slider', 'start' => 10, 'end' => 20, 'step' => 2));
+
         // Date and time
         $builder->add('date',               'date',     array('label' => 'Date'));
         $builder->add('time',               'time',     array('label' => 'Time'));
@@ -40,6 +43,7 @@ class KitchensinkType extends AbstractType
         
         // Textarea
         $builder->add('textarea',           'textarea', array('label' => 'Textarea'));
+
     }
 
     public function setDefaultOptions(OptionsResolverInterface $resolver)
