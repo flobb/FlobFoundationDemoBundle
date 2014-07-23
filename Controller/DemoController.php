@@ -18,7 +18,8 @@ class DemoController extends Controller
         $form->submit(array(
             'textDisabled'      => 'Disabled text',
             'radio'             => 3,
-            'checkbox_disabled' => array(1)
+            'checkbox_disabled' => array(1),
+            'switch_radio'      => 3
         ));
         $form->addError(new FormError('This is a global form error message.'));
         $form->addError(new FormError('This is another global form error message.'));

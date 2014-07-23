@@ -34,7 +34,11 @@ class KitchensinkType extends AbstractType
         $builder->add('checkbox_disabled',  'choice',   array('label' => 'Checkbox disabled', 'choices' => array(1 => 'Yoda'), 'data' => array(1), 'multiple' => true, 'expanded' => true, 'disabled' => true));
 
         // Slider
-        $builder->add('slider',             'slider', array('label' => 'Slider', 'start' => 10, 'end' => 20, 'step' => 2));
+        $builder->add('slider',             'slider',   array('label' => 'Slider', 'start' => 10, 'end' => 20, 'step' => 2));
+
+        // Switch
+        $builder->add('switch_radio',       'switch',   array('label' => 'Switch (as radio)', 'choices' => array(1 => 'Choice 1', 2 => 'Choice 2', 3 => 'Obi wan kenobi'), 'multiple' => false));
+        $builder->add('switch_checkboxes',  'switch',   array('label' => 'Switch (as checkboxes)', 'choices' => array(1 => 'Choice 1', 2 => 'Choice 2', 3 => 'Obi wan kenobi'), 'multiple' => true));
 
         // Date and time
         $builder->add('date',               'date',     array('label' => 'Date'));
