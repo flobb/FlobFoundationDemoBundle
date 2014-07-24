@@ -22,5 +22,10 @@ class FlorianBelhommeFoundationDemoExtension extends Extension
     {
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
+
+        // Add this bundle to assetic
+        $asseticBundles = $container->getParameter('assetic.bundles');
+        $asseticBundles[] = 'FlorianBelhommeFoundationDemoBundle';
+        $container->setParameter('assetic.bundles', $asseticBundles);
     }
 }
