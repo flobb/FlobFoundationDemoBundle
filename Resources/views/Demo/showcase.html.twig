@@ -1,9 +1,50 @@
-{% extends 'FlorianBelhommeFoundationDemoBundle::base.html.twig' %}
+{% extends '::base.html.twig' %}
 {% form_theme form 'FlorianBelhommeFoundationBundle:Form:foundation_form_div_layout.html.twig' %}
+
+{% block title %}Foundation Bundle Showcase{% endblock %}
+
+{% block stylesheets %}
+
+    {# Add the CSS from CDN #}
+    {% stylesheets
+        '//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.1/css/normalize.min.css'
+        '//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.1/css/foundation.min.css'
+        '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css'
+        %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+
+    {# Add the CSS from Bundles #}
+    {% stylesheets
+        '@FlorianBelhommeFoundationBundle/Resources/public/css/foundationtosymfony.css'
+        '@FlorianBelhommeFoundationDemoBundle/Resources/public/css/showcase.css'
+        %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+
+    {# Special js lib to be loaded in the head #}
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
+
+{% endblock %}
 
 {% block body %}
 
-	<div class="row">
+    <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+            <li class="name">
+                <h1><a href="/">FoundationBundle</a></h1>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+        </ul>
+        <section class="top-bar-section">
+            <ul class="right">
+                <li><a href="https://github.com/florianbelhomme/FoundationBundle">The bundle on Github</a></li>
+                <li><a href="florianbelhomme.com">About me</a>
+            </ul>
+        </section>
+    </nav>
+
+	<div class="row full-width">
 	
 	    <div class="large-3 medium-4 columns">
 	        <div class="hide-for-small">
@@ -92,4 +133,22 @@
 	    </div>
 	</div>
 
+{% endblock %}
+
+{% block javascripts %}
+
+    {# Add the JS from CDN #}
+    {% javascripts
+    '//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+    '//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.1/js/foundation.min.js'
+    %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+    {# Add the JS from Bundles #}
+    {% javascripts
+        '@FlorianBelhommeFoundationBundle/Resources/public/js/foundationtosymfony.js'
+        %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
 {% endblock %}
