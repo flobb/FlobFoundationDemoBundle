@@ -5,14 +5,12 @@ namespace FlorianBelhomme\Bundle\FoundationDemoBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\FormError;
 use Symfony\Component\HttpFoundation\Request;
-
 use FlorianBelhomme\Bundle\FoundationDemoBundle\Form\Type\KitchensinkType;
 
 class DemoController extends Controller
 {
     public function showcaseAction(Request $request)
     {
-        
         // Demo form to show all potential
         $form = $this->createForm(new KitchensinkType());
         $form->submit(array(

@@ -9,7 +9,6 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 class FlorianBelhommeFoundationDemoExtension extends Extension
 {
-    
     /**
      * {@inheritDoc}
      */

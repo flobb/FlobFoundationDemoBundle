@@ -4,6 +4,8 @@ By [Florian Belhomme](http://florianbelhomme.com)
 
 See [FoundationBundle](https://github.com/florianbelhomme/FoundationBundle) for more infos and issues.
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/db9a0fbc-7b82-4e8d-9c7c-d8b84d21c6d3/small.png)](https://insight.sensiolabs.com/projects/db9a0fbc-7b82-4e8d-9c7c-d8b84d21c6d3)
+
 ## Install
 
 `composer.json`:
@@ -13,7 +15,7 @@ See [FoundationBundle](https://github.com/florianbelhomme/FoundationBundle) for 
     ...
     "require": {
         ...
-        "florianbelhomme/foundation-demo-bundle" : "1.0.2"
+        "florianbelhomme/foundation-demo-bundle" : "~1.0"
         ...
     }
     ...
