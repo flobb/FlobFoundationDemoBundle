@@ -21,11 +21,11 @@ class DemoController extends Controller
         ));
         $form->addError(new FormError('This is a global form error message.'));
         $form->addError(new FormError('This is another global form error message.'));
-        
+
         // KNP paginator
         $paginator = $this->get('knp_paginator');
         $pagination = $paginator->paginate(range(0, 100), $this->get('request')->query->get('page', 1), 10);
-        
+
         return $this->render('FlorianBelhommeFoundationDemoBundle:Demo:showcase.html.twig', array(
             'form' => $form->createView(),
             'pagination' => $pagination
