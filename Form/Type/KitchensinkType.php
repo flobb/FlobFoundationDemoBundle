@@ -25,7 +25,7 @@ class KitchensinkType extends AbstractType
         $builder->add('percent',            'percent',  array('label' => 'Percent'));
         $builder->add('search',             'search',   array('label' => 'Search'));
         $builder->add('url',                'url',      array('label' => 'Url'));
-        
+
         // Choices
         $builder->add('radio',              'choice',   array('label' => 'Radio', 'choices' => array(1 => 'Choice 1', 2 => 'Choice 2', 3 => 'Obi wan kenobi'), 'multiple' => false, 'expanded' => true));
         $builder->add('radio_disabled',     'choice',   array('label' => 'Radio disabled', 'choices' => array(1 => 'Yoda'), 'multiple' => false, 'expanded' => true, 'disabled' => true));
@@ -43,7 +43,7 @@ class KitchensinkType extends AbstractType
         $builder->add('date',               'date',     array('label' => 'Date'));
         $builder->add('time',               'time',     array('label' => 'Time'));
         $builder->add('datetime',           'datetime', array('label' => 'Datetime'));
-        
+
         // Textarea
         $builder->add('textarea',           'textarea', array('label' => 'Textarea'));
     }
@@ -51,8 +51,8 @@ class KitchensinkType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'csrf_protection'   => false,
-        ));
+                'csrf_protection'   => false,
+            ));
     }
 
     public function getName()
