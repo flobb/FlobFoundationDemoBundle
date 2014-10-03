@@ -3,12 +3,10 @@
 namespace FlorianBelhomme\Bundle\FoundationDemoBundle\Menu;
 
 use Symfony\Component\HttpFoundation\Request;
-
 use Knp\Menu\FactoryInterface;
 
 class MenuBuilder
 {
-    
     protected $factory = null;
     
     public function __construct(FactoryInterface $factory)

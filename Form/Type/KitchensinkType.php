@@ -5,7 +5,6 @@ namespace FlorianBelhomme\Bundle\FoundationDemoBundle\Form\Type;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
-
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\NotNull;
 
@@ -47,14 +46,13 @@ class KitchensinkType extends AbstractType
         
         // Textarea
         $builder->add('textarea',           'textarea', array('label' => 'Textarea'));
-
     }
 
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
-      $resolver->setDefaults(array(
-        'csrf_protection'   => false,
-      ));
+        $resolver->setDefaults(array(
+            'csrf_protection'   => false,
+        ));
     }
 
     public function getName()
