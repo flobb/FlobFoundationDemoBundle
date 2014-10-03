@@ -5,7 +5,7 @@ showcase_homepage:
 showcase_level1:
     path:      /level1/
     defaults:  { _controller: FlorianBelhommeFoundationDemoBundle:Demo:Showcase }
-    
+
 showcase_level2:
     path:      /level1/level2/
     defaults:  { _controller: FlorianBelhommeFoundationDemoBundle:Demo:Showcase }
