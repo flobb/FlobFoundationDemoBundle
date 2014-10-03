@@ -7,19 +7,19 @@
 
     {# Add the CSS from CDN #}
     {% stylesheets
-        '//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.1/css/normalize.min.css'
-        '//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.1/css/foundation.min.css'
-        '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css'
-        %}
-        <link rel="stylesheet" href="{{ asset_url }}" />
+    '//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.1/css/normalize.min.css'
+    '//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.1/css/foundation.min.css'
+    '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css'
+    %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
 
     {# Add the CSS from Bundles #}
     {% stylesheets
-        '@FlorianBelhommeFoundationBundle/Resources/public/css/foundationtosymfony.css'
-        '@FlorianBelhommeFoundationDemoBundle/Resources/public/css/showcase.css'
-        %}
-        <link rel="stylesheet" href="{{ asset_url }}" />
+    '@FlorianBelhommeFoundationBundle/Resources/public/css/foundationtosymfony.css'
+    '@FlorianBelhommeFoundationDemoBundle/Resources/public/css/showcase.css'
+    %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
 
     {# Special js lib to be loaded in the head #}
@@ -44,94 +44,94 @@
         </section>
     </nav>
 
-	<div class="row full-width">
-	
-	    <div class="large-3 medium-4 columns">
-	        <div class="hide-for-small">
-	            <div class="sidebar">
-	                <nav>
-	                    <ul class="side-nav">
-	                        <li class="heading">This page is only<br />a quick demo</li>
-	                        <li class="divider"></li>
-	                        <li class="heading">Documentation</li>
-	                        <li><a href="#about">About</a></li>
-	                        <li><a href="#started">Getting Started</a></li>
-	                        <li><a href="#usage">Common usage</a></li>
-	                        <li class="divider"></li>
-	                        <li class="heading">Kitchen Sink / Demo</li>
-	                        <li><a href="#menus">Menus & sidebar</a></li>
-	                        <li><a href="#pagination">Pagination</a></li>
-	                        <li><a href="#forms">Form</a></li>
-	                    </ul>
-	                </nav>
-	            </div>
-	        </div>
-	    </div>
-	
-	    <div class="large-9 medium-8 columns">
-	    
+    <div class="row full-width">
+
+        <div class="large-3 medium-4 columns">
+            <div class="hide-for-small">
+                <div class="sidebar">
+                    <nav>
+                        <ul class="side-nav">
+                            <li class="heading">This page is only<br />a quick demo</li>
+                            <li class="divider"></li>
+                            <li class="heading">Documentation</li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#started">Getting Started</a></li>
+                            <li><a href="#usage">Common usage</a></li>
+                            <li class="divider"></li>
+                            <li class="heading">Kitchen Sink / Demo</li>
+                            <li><a href="#menus">Menus & sidebar</a></li>
+                            <li><a href="#pagination">Pagination</a></li>
+                            <li><a href="#forms">Form</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="large-9 medium-8 columns">
+
             <div class="row" id="about">
                 <div class="large-12 columns">
                     <h3>About</h3>
-	                <p>
-	                    This bundle integrates the functionnalities of the responsive framework Foundation, from Zurb (thanks guys), into Symfony2 by providing templates, Twig extensions, services and commands. You can quickly setup a responsive theme for an interface for your projet. It will have the "look'n'feel", the responsiveness and the simplicity of Foundation.<br />
+                    <p>
+                        This bundle integrates the functionnalities of the responsive framework Foundation, from Zurb (thanks guys), into Symfony2 by providing templates, Twig extensions, services and commands. You can quickly setup a responsive theme for an interface for your projet. It will have the "look'n'feel", the responsiveness and the simplicity of Foundation.<br />
                         <b>BE AWARE: THIS BUNDLE WILL NOT ADD THE FOUNDATION FRAMEWORK BUT RATHER FUNCTIONNALITIES FOR SYMFONY TO WORK WITH IT</b><br />
                         To include Foundation, jQuery, Normalize & Modernizer you can use the CloudFlare CDN. This bundle uses icons from Font Awesome. To add it, you can use the bootstrapcdn.
                     </p>
-	            </div>
+                </div>
             </div>
-	
-	        <div class="row" id="started">
-	            <div class="large-12 columns">
-	                <h3>Getting Started</h3>
-	                <p>
-	                    If you have planned to use the KNP Menu bundle or the KNP Pagination bundle, make sure you have declared them before the Foundation bundle in AppKernel.php.<br />
-	                    Add the "florianbelhomme/foundation-bundle" in your Symfony2 project. For detailed installation instructions or issues, please visit <a href="https://github.com/florianbelhomme/FoundationBundle">the bundle on Github (https://github.com/florianbelhomme/FoundationBundle)</a><br />
-	                    Your project is ready!
-	                </p>
-	            </div>
-	        </div>
-	
-	        <div class="row" id="usage">
-	            <div class="large-12 columns">
-	                <h3>Common usage</h3>
-	                <p>
-	                    If you want to theme all your project with Foundation, the easiest way is to go into the app/config/config.yml and add at the end :<br />
-	                    fb_foundation:<br />
-                            theme: { form: true, knp_menu: true, knp_paginator: true }
-	                </p>
-	                <p>(But you can also theme specific elements, look into the bundle's readme for explainations)</p>
-	            </div>
-	        </div>
-	        
-	        <div class="row" id="menus">
-	            <div class="large-12 columns">
-	                <h3>Menus & sidebar (Using KNP Menu)</h3>
-	                <h4>Top menu</h4>
-	                {{ knp_menu_render('topmenu', {'template' : 'FlorianBelhommeFoundationBundle:Menu:foundation_knp_menu.html.twig'}) }} <br>
-	                <h4>Side menu</h4>
-	                {{ knp_menu_render('sidebar', {'template' : 'FlorianBelhommeFoundationBundle:Menu:foundation_knp_menu.html.twig'}) }} <br>
-	                <h4>Breadcrumb (auto-generated from top menu)</h4>
-	                {{ fbfb_breadcrumb_render('topmenu') }}
-	            </div>
-	        </div>
-	
-	        <div class="row" id="pagination">
-	            <div class="large-12 columns">
-	                <h3>Pagination (Using KNP Paginator)</h3>
-	                {{ knp_pagination_render(pagination, 'FlorianBelhommeFoundationBundle:Pagination:foundation_sliding.html.twig') }}
-	            </div>
-	        </div>
-	
-	        <div class="row" id="forms">
-	            <div class="large-12 columns">
-	                <h3>Form (generated by SF2)</h3>
-	                {{ form(form) }}
-	            </div>
-	        </div>
 
-	    </div>
-	</div>
+            <div class="row" id="started">
+                <div class="large-12 columns">
+                    <h3>Getting Started</h3>
+                    <p>
+                        If you have planned to use the KNP Menu bundle or the KNP Pagination bundle, make sure you have declared them before the Foundation bundle in AppKernel.php.<br />
+                        Add the "florianbelhomme/foundation-bundle" in your Symfony2 project. For detailed installation instructions or issues, please visit <a href="https://github.com/florianbelhomme/FoundationBundle">the bundle on Github (https://github.com/florianbelhomme/FoundationBundle)</a><br />
+                        Your project is ready!
+                    </p>
+                </div>
+            </div>
+
+            <div class="row" id="usage">
+                <div class="large-12 columns">
+                    <h3>Common usage</h3>
+                    <p>
+                        If you want to theme all your project with Foundation, the easiest way is to go into the app/config/config.yml and add at the end :<br />
+                        fb_foundation:<br />
+                        theme: { form: true, knp_menu: true, knp_paginator: true }
+                    </p>
+                    <p>(But you can also theme specific elements, look into the bundle's readme for explainations)</p>
+                </div>
+            </div>
+
+            <div class="row" id="menus">
+                <div class="large-12 columns">
+                    <h3>Menus & sidebar (Using KNP Menu)</h3>
+                    <h4>Top menu</h4>
+                    {{ knp_menu_render('topmenu', {'template' : 'FlorianBelhommeFoundationBundle:Menu:foundation_knp_menu.html.twig'}) }} <br>
+                    <h4>Side menu</h4>
+                    {{ knp_menu_render('sidebar', {'template' : 'FlorianBelhommeFoundationBundle:Menu:foundation_knp_menu.html.twig'}) }} <br>
+                    <h4>Breadcrumb (auto-generated from top menu)</h4>
+                    {{ fbfb_breadcrumb_render('topmenu') }}
+                </div>
+            </div>
+
+            <div class="row" id="pagination">
+                <div class="large-12 columns">
+                    <h3>Pagination (Using KNP Paginator)</h3>
+                    {{ knp_pagination_render(pagination, 'FlorianBelhommeFoundationBundle:Pagination:foundation_sliding.html.twig') }}
+                </div>
+            </div>
+
+            <div class="row" id="forms">
+                <div class="large-12 columns">
+                    <h3>Form (generated by SF2)</h3>
+                    {{ form(form) }}
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 {% endblock %}
 
@@ -139,16 +139,16 @@
 
     {# Add the JS from CDN #}
     {% javascripts
-        '//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'
-        '//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.1/js/foundation.min.js'
-        %}
-        <script type="text/javascript" src="{{ asset_url }}"></script>
+    '//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+    '//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.1/js/foundation.min.js'
+    %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
 
     {# Add the JS from Bundles #}
     {% javascripts
-        '@FlorianBelhommeFoundationBundle/Resources/public/js/foundationtosymfony.js'
-        %}
-        <script type="text/javascript" src="{{ asset_url }}"></script>
+    '@FlorianBelhommeFoundationBundle/Resources/public/js/foundationtosymfony.js'
+    %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
 {% endblock %}
