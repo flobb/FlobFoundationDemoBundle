@@ -1,7 +1,7 @@
 services:
 
     fbfdb.menu_builder:
-        class: FlorianBelhomme\Bundle\FoundationDemoBundle\Menu\MenuBuilder
+        class: Flob\Bundle\FoundationDemoBundle\Menu\MenuBuilder
         arguments: [@knp_menu.factory]
 
     fbfdb.menu.topmenu:

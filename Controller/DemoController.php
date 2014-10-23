@@ -1,11 +1,11 @@
 <?php
 
-namespace FlorianBelhomme\Bundle\FoundationDemoBundle\Controller;
+namespace Flob\Bundle\FoundationDemoBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\FormError;
 use Symfony\Component\HttpFoundation\Request;
-use FlorianBelhomme\Bundle\FoundationDemoBundle\Form\Type\KitchensinkType;
+use Flob\Bundle\FoundationDemoBundle\Form\Type\KitchensinkType;
 
 class DemoController extends Controller
 {
@@ -26,7 +26,7 @@ class DemoController extends Controller
         $paginator = $this->get('knp_paginator');
         $pagination = $paginator->paginate(range(0, 100), $this->get('request')->query->get('page', 1), 10);
 
-        return $this->render('FlorianBelhommeFoundationDemoBundle:Demo:showcase.html.twig', array(
+        return $this->render('FlobFoundationDemoBundle:Demo:showcase.html.twig', array(
             'form' => $form->createView(),
             'pagination' => $pagination
         ));

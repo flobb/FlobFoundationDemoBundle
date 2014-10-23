@@ -1,6 +1,6 @@
 <?php
 
-namespace FlorianBelhomme\Bundle\FoundationDemoBundle\Form\Type;
+namespace Flob\Bundle\FoundationDemoBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;

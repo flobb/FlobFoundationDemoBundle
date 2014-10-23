@@ -1,10 +1,8 @@
-# [Foundation Demo Bundle](https://github.com/florianbelhomme/FoundationBundle)
+# [Flob Foundation Demo Bundle](https://github.com/florianbelhomme/FlobFoundationDemoBundle)
 
 By [Florian Belhomme](http://florianbelhomme.com)
 
-See [FoundationBundle](https://github.com/florianbelhomme/FoundationBundle) for more infos and issues.
-
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/db9a0fbc-7b82-4e8d-9c7c-d8b84d21c6d3/small.png)](https://insight.sensiolabs.com/projects/db9a0fbc-7b82-4e8d-9c7c-d8b84d21c6d3)
+See [FlobFoundationBundle](https://github.com/florianbelhomme/FlobFoundationBundle) for more infos and issues.
 
 ## Install
 
@@ -15,7 +13,7 @@ See [FoundationBundle](https://github.com/florianbelhomme/FoundationBundle) for 
     ...
     "require": {
         ...
-        "florianbelhomme/foundation-demo-bundle" : "~1.0"
+        "flob/foundation-demo-bundle" : "~2.0"
         ...
     }
     ...
@@ -33,8 +31,8 @@ class AppKernel extends Kernel
             ...
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
-            new FlorianBelhomme\Bundle\FoundationBundle\FlorianBelhommeFoundationBundle(),
-            new FlorianBelhomme\Bundle\FoundationDemoBundle\FlorianBelhommeFoundationDemoBundle(),
+            new Flob\Bundle\FoundationBundle\FlobFoundationBundle(),
+            new Flob\Bundle\FoundationDemoBundle\FlobFoundationDemoBundle(),
             ...
         );
     }
@@ -44,7 +42,7 @@ class AppKernel extends Kernel
 `app/config/routing.yml`
 ```YAML
 demo:
-    resource: "@FlorianBelhommeFoundationDemoBundle/Resources/config/routing.yml"
+    resource: "@FlobFoundationDemoBundle/Resources/config/routing.yml"
     prefix:   /foundation
 ```
 

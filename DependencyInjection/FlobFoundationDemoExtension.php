@@ -1,13 +1,13 @@
 <?php
 
-namespace FlorianBelhomme\Bundle\FoundationDemoBundle\DependencyInjection;
+namespace Flob\Bundle\FoundationDemoBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
-class FlorianBelhommeFoundationDemoExtension extends Extension
+class FlobFoundationDemoExtension extends Extension
 {
     /**
      * {@inheritDoc}
@@ -19,7 +19,7 @@ class FlorianBelhommeFoundationDemoExtension extends Extension
 
         // Add this bundle to assetic
         $asseticBundles = $container->getParameter('assetic.bundles');
-        $asseticBundles[] = 'FlorianBelhommeFoundationDemoBundle';
+        $asseticBundles[] = 'FlobFoundationDemoBundle';
         $container->setParameter('assetic.bundles', $asseticBundles);
     }
 }

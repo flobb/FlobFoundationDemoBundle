@@ -1,5 +1,5 @@
 {% extends '::base.html.twig' %}
-{% form_theme form 'FlorianBelhommeFoundationBundle:Form:foundation_form_div_layout.html.twig' %}
+{% form_theme form 'FlobFoundationBundle:Form:foundation_form_div_layout.html.twig' %}
 
 {% block title %}Foundation Bundle Showcase{% endblock %}
 
@@ -16,8 +16,8 @@
 
     {# Add the CSS from Bundles #}
     {% stylesheets
-    '@FlorianBelhommeFoundationBundle/Resources/public/css/foundationtosymfony.css'
-    '@FlorianBelhommeFoundationDemoBundle/Resources/public/css/showcase.css'
+    '@FlobFoundationBundle/Resources/public/css/foundationtosymfony.css'
+    '@FlobFoundationDemoBundle/Resources/public/css/showcase.css'
     %}
     <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
@@ -38,8 +38,8 @@
         </ul>
         <section class="top-bar-section">
             <ul class="right">
-                <li><a href="https://github.com/florianbelhomme/FoundationBundle">The bundle on Github</a></li>
-                <li><a href="florianbelhomme.com">About me</a>
+                <li><a href="https://github.com/Flob/FoundationBundle">The bundle on Github</a></li>
+                <li><a href="Flob.com">About me</a>
             </ul>
         </section>
     </nav>
@@ -86,7 +86,7 @@
                     <h3>Getting Started</h3>
                     <p>
                         If you have planned to use the KNP Menu bundle or the KNP Pagination bundle, make sure you have declared them before the Foundation bundle in AppKernel.php.<br />
-                        Add the "florianbelhomme/foundation-bundle" in your Symfony2 project. For detailed installation instructions or issues, please visit <a href="https://github.com/florianbelhomme/FoundationBundle">the bundle on Github (https://github.com/florianbelhomme/FoundationBundle)</a><br />
+                        Add the "Flob/foundation-bundle" in your Symfony2 project. For detailed installation instructions or issues, please visit <a href="https://github.com/Flob/FoundationBundle">the bundle on Github (https://github.com/Flob/FoundationBundle)</a><br />
                         Your project is ready!
                     </p>
                 </div>
@@ -108,9 +108,9 @@
                 <div class="large-12 columns">
                     <h3>Menus & sidebar (Using KNP Menu)</h3>
                     <h4>Top menu</h4>
-                    {{ knp_menu_render('topmenu', {'template' : 'FlorianBelhommeFoundationBundle:Menu:foundation_knp_menu.html.twig'}) }} <br>
+                    {{ knp_menu_render('topmenu', {'template' : 'FlobFoundationBundle:Menu:foundation_knp_menu.html.twig'}) }} <br>
                     <h4>Side menu</h4>
-                    {{ knp_menu_render('sidebar', {'template' : 'FlorianBelhommeFoundationBundle:Menu:foundation_knp_menu.html.twig'}) }} <br>
+                    {{ knp_menu_render('sidebar', {'template' : 'FlobFoundationBundle:Menu:foundation_knp_menu.html.twig'}) }} <br>
                     <h4>Breadcrumb (auto-generated from top menu)</h4>
                     {{ fbfb_breadcrumb_render('topmenu') }}
                 </div>
@@ -119,7 +119,7 @@
             <div class="row" id="pagination">
                 <div class="large-12 columns">
                     <h3>Pagination (Using KNP Paginator)</h3>
-                    {{ knp_pagination_render(pagination, 'FlorianBelhommeFoundationBundle:Pagination:foundation_sliding.html.twig') }}
+                    {{ knp_pagination_render(pagination, 'FlobFoundationBundle:Pagination:foundation_sliding.html.twig') }}
                 </div>
             </div>
 
@@ -147,7 +147,7 @@
 
     {# Add the JS from Bundles #}
     {% javascripts
-    '@FlorianBelhommeFoundationBundle/Resources/public/js/foundationtosymfony.js'
+    '@FlobFoundationBundle/Resources/public/js/foundationtosymfony.js'
     %}
     <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
