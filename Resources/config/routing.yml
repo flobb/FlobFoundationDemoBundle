@@ -1,11 +1,11 @@
 showcase_homepage:
     path:      /
-    defaults:  { _controller: FlorianBelhommeFoundationDemoBundle:Demo:Showcase }
+    defaults:  { _controller: FlobFoundationDemoBundle:Demo:Showcase }
 
 showcase_level1:
     path:      /level1/
-    defaults:  { _controller: FlorianBelhommeFoundationDemoBundle:Demo:Showcase }
+    defaults:  { _controller: FlobFoundationDemoBundle:Demo:Showcase }
 
 showcase_level2:
     path:      /level1/level2/
-    defaults:  { _controller: FlorianBelhommeFoundationDemoBundle:Demo:Showcase }
+    defaults:  { _controller: FlobFoundationDemoBundle:Demo:Showcase }

@@ -1,11 +1,11 @@
 {
-	"name" : "florianbelhomme/foundation-demo-bundle",
-	"description" : "Provides a kitchen sink (exemples) of the functionnalities of the florianbelhomme/foundation-bundle bundle.",
+	"name" : "Flob/foundation-demo-bundle",
+	"description" : "Provides a kitchen sink (exemples) of the functionnalities of the Flob/foundation-bundle bundle.",
 	"type" : "symfony-bundle",
 	"authors" : [{
 			"name" : "Florian Belhomme",
-			"email" : "contact@florianbelhomme.com",
-			"homepage" : "http://florianbelhomme.com",
+			"email" : "contact@Flob.com",
+			"homepage" : "http://Flob.com",
 			"role" : "Developer"
 		}
 	],
@@ -25,12 +25,12 @@
 		"knplabs/knp-paginator-bundle" : "2.4.0",
 		"knplabs/knp-menu" : "1.1.2",
 		"knplabs/knp-menu-bundle" : "1.1.2",
-		"florianbelhomme/foundation-bundle" : "~1.0"
+		"Flob/foundation-bundle" : "~1.0"
 	},
 	"autoload" : {
 		"psr-0" : {
-			"FlorianBelhomme\\Bundle\\FoundationDemoBundle" : ""
+			"Flob\\Bundle\\FoundationDemoBundle" : ""
 		}
 	},
-	"target-dir" : "FlorianBelhomme/Bundle/FoundationDemoBundle"
+	"target-dir" : "Flob/Bundle/FoundationDemoBundle"
 }

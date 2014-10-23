@@ -1,6 +1,6 @@
 <?php
 
-namespace FlorianBelhomme\Bundle\FoundationDemoBundle\Menu;
+namespace Flob\Bundle\FoundationDemoBundle\Menu;
 
 use Symfony\Component\HttpFoundation\Request;
 use Knp\Menu\FactoryInterface;
