@@ -2,11 +2,12 @@
 
 By [Florian Belhomme](http://florianbelhomme.com)
 
+Show the possibility of [FlobFoundationBundle](https://github.com/florianbelhomme/FlobFoundationBundle).
 See [FlobFoundationBundle](https://github.com/florianbelhomme/FlobFoundationBundle) for more infos and issues.
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/db9a0fbc-7b82-4e8d-9c7c-d8b84d21c6d3/small.png)](https://insight.sensiolabs.com/projects/db9a0fbc-7b82-4e8d-9c7c-d8b84d21c6d3)
 
-## Install
+## Usage
 
 `composer.json`:
 
@@ -33,6 +34,9 @@ class AppKernel extends Kernel
             ...
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+            
+            new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
+            
             new Flob\Bundle\FoundationBundle\FlobFoundationBundle(),
             new Flob\Bundle\FoundationDemoBundle\FlobFoundationDemoBundle(),
             ...
@@ -45,10 +49,10 @@ class AppKernel extends Kernel
 ```YAML
 demo:
     resource: "@FlobFoundationDemoBundle/Resources/config/routing.yml"
-    prefix:   /foundation
+    prefix:   /
 ```
 
-Then go to /foundation/
+Then go to /
 
 ## License
 
