@@ -2,8 +2,8 @@
 
 namespace Flob\Bundle\FoundationDemoBundle\Menu;
 
-use Symfony\Component\HttpFoundation\Request;
 use Knp\Menu\FactoryInterface;
+use Symfony\Component\HttpFoundation\Request;
 
 class MenuBuilder
 {
@@ -14,7 +14,7 @@ class MenuBuilder
         $this->factory = $factory;
     }
 
-    public function createTopMenu(Request $request)
+    public function createTopMenu()
     {
         $menu = $this->factory->createItem('Home', array('route' => 'showcase_homepage', 'extras' => array('menu_type' => 'topmenu')));
 
@@ -54,12 +54,10 @@ class MenuBuilder
         $user->addChild('Sub item 3', array('route' => 'showcase_level1'));
         $menu->addChild($user);
 
-        $menu->setCurrentUri($request->getBaseUrl().$request->getPathInfo());
-
         return $menu;
     }
 
-    public function createSidebar(Request $request)
+    public function createSidebar()
     {
         $menu = $this->factory->createItem('home', array('extras' => array('menu_type' => 'sidebar')));
 
@@ -68,8 +66,6 @@ class MenuBuilder
         $menu->addChild('Sub item 3', array('route' => 'showcase_homepage', 'extras' => array('divider_append' => true)));
         $menu->addChild('Sub item 5', array('route' => 'showcase_homepage'));
         $menu->addChild('Sub item 6', array('route' => 'showcase_homepage'));
-
-        $menu->setCurrentUri($request->getBaseUrl().$request->getPathInfo());
 
         return $menu;
     }
