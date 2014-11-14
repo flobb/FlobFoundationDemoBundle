@@ -12,18 +12,15 @@ class KitchensinkType extends AbstractType
     {
         $choices = array('Choice 1', 'Choice 2', 'Obi wan kenobi');
         $builder
-            ->add('text1', 'text', array(
+            ->add('text', 'text', array(
                 'constraints' => new Assert\NotBlank(),
-                'attr' => array('placeholder' => 'not blank constraints')
+                'attr' => array('placeholder' => 'This is a placeholder')
             ))
             ->add('textarea', 'textarea')
             ->add('email', 'email')
             ->add('integer', 'integer')
             ->add('money', 'money', array(
-                'currency' => 'EUR',
-            ))
-            ->add('money2', 'money', array(
-                'currency' => 'USD',
+                'currency' => 'EUR'
             ))
             ->add(
                 $builder->create('sub-form', 'form')
@@ -124,8 +121,24 @@ class KitchensinkType extends AbstractType
                 'type' => 'password',
                 'invalid_message' => 'The password fields must match.',
                 'options' => array('required' => true),
-                'first_options' => array('label' => 'Password'),
+                'first_options' => array('label' => 'Password field with his repeat'),
                 'second_options' => array('label' => 'Repeat Password'),
+            ))
+            ->add('slider', 'slider', array(
+                'label' => 'Slider',
+                'start' => 10,
+                'end' => 20,
+                'step' => 2,
+            ))
+            ->add('switch_radio', 'switch', array(
+                'label' => 'Switch (as radio)',
+                'choices' => $choices,
+                'multiple' => false,
+            ))
+            ->add('switch_checkboxes', 'switch', array(
+                'label' => 'Switch (as checkboxes)',
+                'choices' => $choices,
+                'multiple' => true,
             ));
     }
 
