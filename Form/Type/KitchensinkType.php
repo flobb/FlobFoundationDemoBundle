@@ -14,13 +14,13 @@ class KitchensinkType extends AbstractType
         $builder
             ->add('text', 'text', array(
                 'constraints' => new Assert\NotBlank(),
-                'attr' => array('placeholder' => 'This is a placeholder')
+                'attr' => array('placeholder' => 'This is a placeholder'),
             ))
             ->add('textarea', 'textarea')
             ->add('email', 'email')
             ->add('integer', 'integer')
             ->add('money', 'money', array(
-                'currency' => 'EUR'
+                'currency' => 'EUR',
             ))
             ->add(
                 $builder->create('sub-form', 'form')
@@ -85,11 +85,9 @@ class KitchensinkType extends AbstractType
             ->add('language', 'language')
             ->add('locale', 'locale')
             ->add('timezone', 'timezone', array(
-                // I know, this do not make sens, but I want an error
                 'constraints' => new Assert\True(),
             ))
             ->add('date', 'date', array(
-                // I know, this do not make sens, but I want an error
                 'constraints' => new Assert\True(),
             ))
             ->add('date_single_text', 'date', array(
@@ -97,7 +95,6 @@ class KitchensinkType extends AbstractType
                 'constraints' => new Assert\NotBlank(),
             ))
             ->add('datetime', 'datetime', array(
-                // I know, this do not make sens, but I want an error
                 'constraints' => new Assert\True(),
             ))
             ->add('datetime_single_text', 'datetime', array(
@@ -105,7 +102,6 @@ class KitchensinkType extends AbstractType
                 'constraints' => new Assert\NotBlank(),
             ))
             ->add('time', 'time', array(
-                // I know, this do not make sens, but I want an error
                 'constraints' => new Assert\True(),
             ))
             ->add('time_single_text', 'time', array(
@@ -113,7 +109,6 @@ class KitchensinkType extends AbstractType
                 'constraints' => new Assert\NotBlank(),
             ))
             ->add('birthday', 'birthday', array(
-                // I know, this do not make sens, but I want an error
                 'constraints' => new Assert\True(),
             ))
             ->add('file', 'file')
@@ -124,11 +119,18 @@ class KitchensinkType extends AbstractType
                 'first_options' => array('label' => 'Password field with his repeat'),
                 'second_options' => array('label' => 'Repeat Password'),
             ))
-            ->add('slider', 'slider', array(
-                'label' => 'Slider',
+            ->add('slider_h', 'slider', array(
+                'label' => 'Slider (horizontal)',
                 'start' => 10,
                 'end' => 20,
                 'step' => 2,
+            ))
+            ->add('slider_v', 'slider', array(
+                'label' => 'Slider (vertical)',
+                'start' => 10,
+                'end' => 20,
+                'step' => 2,
+                'vertical' => true,
             ))
             ->add('switch_radio', 'switch', array(
                 'label' => 'Switch (as radio)',
