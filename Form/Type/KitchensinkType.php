@@ -141,6 +141,100 @@ class KitchensinkType extends AbstractType
                 'label' => 'Switch (as checkboxes)',
                 'choices' => $choices,
                 'multiple' => true,
+            ))
+            ->add('button_group', 'button_group', array(
+                'label' => 'Buttons group',
+                'buttons' => array(
+                    'save' => array(
+                        'type'    => 'submit',
+                        'options' => array(
+                            'label' => 'Submit',
+                        ),
+                    ),
+                    'back' => array(
+                        'type'    => 'button',
+                        'options' => array(
+                            'label' => 'Cancel',
+                            'attr' => array(
+                                'class' => 'secondary',
+                            ),
+                        ),
+                    ),
+                ),
+                'options' => array(
+                    'class' => 'radius',
+                ),
+            ))
+            ->add('button_bar', 'button_bar', array(
+                'button_groups' => array(
+                    'button_group_first' => array(
+                        'label' => 'Buttons group',
+                        'buttons' => array(
+                            'one' => array(
+                                'type'    => 'submit',
+                                'options' => array(
+                                    'label' => 'one',
+                                ),
+                            ),
+                            'two' => array(
+                                'type'    => 'button',
+                                'options' => array(
+                                    'label' => 'two',
+                                    'attr' => array(
+                                        'class' => 'secondary',
+                                    ),
+                                ),
+                            ),
+                            'three' => array(
+                                'type'    => 'button',
+                                'options' => array(
+                                    'label' => 'three',
+                                    'attr' => array(
+                                        'class' => 'secondary',
+                                    ),
+                                ),
+                            ),
+                        ),
+                        'options' => array(
+                            'class' => 'radius',
+                        ),
+                    ),
+                    'button_group_second' => array(
+                        'label' => 'Buttons group',
+                        'buttons' => array(
+                            'four' => array(
+                                'type'    => 'button',
+                                'options' => array(
+                                    'label' => 'four',
+                                    'attr' => array(
+                                        'class' => 'secondary',
+                                    ),
+                                ),
+                            ),
+                            'five' => array(
+                                'type'    => 'button',
+                                'options' => array(
+                                    'label' => 'five',
+                                    'attr' => array(
+                                        'class' => 'secondary',
+                                    ),
+                                ),
+                            ),
+                            'six' => array(
+                                'type'    => 'button',
+                                'options' => array(
+                                    'label' => 'six',
+                                    'attr' => array(
+                                        'class' => 'secondary',
+                                    ),
+                                ),
+                            ),
+                        ),
+                        'options' => array(
+                            'class' => 'round',
+                        ),
+                    ),
+                ),
             ));
     }
 
