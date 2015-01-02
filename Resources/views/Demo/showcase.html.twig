@@ -25,8 +25,8 @@
 
     {# Add the CSS from Bundles #}
     {% stylesheets
-    'FlobFoundationBundle/Resources/public/css/foundationtosymfony.css'
-    'FlobFoundationDemoBundle/Resources/public/css/showcase.css'
+    '@FlobFoundationBundle/Resources/public/css/*'
+    '@FlobFoundationDemoBundle/Resources/public/css/*'
     %}
     <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
@@ -185,7 +185,7 @@
 
     {# Add the JS from Bundles #}
     {% javascripts
-    'FlobFoundationBundle/Resources/public/js/foundationtosymfony.js'
+    '@FlobFoundationBundle/Resources/public/js/*'
     %}
     <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}

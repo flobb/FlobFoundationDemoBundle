@@ -28,7 +28,7 @@ class DemoController extends Controller
 
         return $this->render('FlobFoundationDemoBundle:Demo:showcase.html.twig', array(
             'form'          => $form->createView(),
-            'pagination'    => $pagination
+            'pagination'    => $pagination,
         ));
     }
 }

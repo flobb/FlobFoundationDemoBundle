@@ -133,24 +133,18 @@ class KitchensinkType extends AbstractType
                 'vertical' => true,
             ))
             ->add('switch_radio', 'switch', array(
-                'label' => 'Switch (as radio)',
+                'label' => 'Switches (as radio)',
                 'choices' => $choices,
                 'multiple' => false,
             ))
             ->add('switch_checkboxes', 'switch', array(
-                'label' => 'Switch (as checkboxes)',
+                'label' => 'Switches (as checkboxes)',
                 'choices' => $choices,
                 'multiple' => true,
             ))
             ->add('button_group', 'button_group', array(
                 'label' => 'Buttons group',
                 'buttons' => array(
-                    'save' => array(
-                        'type'    => 'submit',
-                        'options' => array(
-                            'label' => 'Submit',
-                        ),
-                    ),
                     'back' => array(
                         'type'    => 'button',
                         'options' => array(
@@ -160,9 +154,15 @@ class KitchensinkType extends AbstractType
                             ),
                         ),
                     ),
+                    'save' => array(
+                        'type'    => 'submit',
+                        'options' => array(
+                            'label' => 'Submit',
+                        ),
+                    ),
                 ),
-                'options' => array(
-                    'class' => 'radius',
+                'attr' => array(
+                    'class' => 'right',
                 ),
             ))
             ->add('button_bar', 'button_bar', array(
@@ -181,7 +181,7 @@ class KitchensinkType extends AbstractType
                                 'options' => array(
                                     'label' => 'two',
                                     'attr' => array(
-                                        'class' => 'secondary',
+                                        'class' => 'success',
                                     ),
                                 ),
                             ),
@@ -190,13 +190,13 @@ class KitchensinkType extends AbstractType
                                 'options' => array(
                                     'label' => 'three',
                                     'attr' => array(
-                                        'class' => 'secondary',
+                                        'class' => 'alert',
                                     ),
                                 ),
                             ),
                         ),
-                        'options' => array(
-                            'class' => 'radius',
+                        'attr' => array(
+                            'class' => 'round',
                         ),
                     ),
                     'button_group_second' => array(
@@ -207,7 +207,7 @@ class KitchensinkType extends AbstractType
                                 'options' => array(
                                     'label' => 'four',
                                     'attr' => array(
-                                        'class' => 'secondary',
+                                        'class' => 'disabled',
                                     ),
                                 ),
                             ),
@@ -230,8 +230,8 @@ class KitchensinkType extends AbstractType
                                 ),
                             ),
                         ),
-                        'options' => array(
-                            'class' => 'round',
+                        'attr' => array(
+                            'class' => 'radius',
                         ),
                     ),
                 ),
