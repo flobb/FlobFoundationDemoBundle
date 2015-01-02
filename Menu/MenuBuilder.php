@@ -3,7 +3,6 @@
 namespace Flob\Bundle\FoundationDemoBundle\Menu;
 
 use Knp\Menu\FactoryInterface;
-use Symfony\Component\HttpFoundation\Request;
 
 class MenuBuilder
 {
