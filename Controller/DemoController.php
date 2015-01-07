@@ -12,19 +12,15 @@ class DemoController extends Controller
     public function showcaseAction(Request $request)
     {
         // Demo form to show all potential
-        $form = $this->createForm(new KitchensinkType());/*
-        $form->submit(array(
-            'textDisabled'      => 'Disabled text',
-            'radio'             => 3,
-            'checkbox_disabled' => array(1),
-            'switch_radio'      => 3
-        ));
+        // DO NOT DISABLE "csrf_protection" @home : it's only to not have the warning message in the demo
+        $form = $this->createForm(new KitchensinkType(), null, array('csrf_protection' => false));
+        $form->submit(array());
         $form->addError(new FormError('This is a global form error message.'));
         $form->addError(new FormError('This is another global form error message.'));
-*/
+
         // KNP paginator
         $paginator = $this->get('knp_paginator');
-        $pagination = $paginator->paginate(range(0, 100), $this->get('request')->query->get('page', 1), 10);
+        $pagination = $paginator->paginate(range(0, 100), $request->query->get('page', 1), 10);
 
         return $this->render('FlobFoundationDemoBundle:Demo:showcase.html.twig', array(
             'form'          => $form->createView(),
