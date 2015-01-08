@@ -12,7 +12,7 @@ class DemoController extends Controller
     public function showcaseAction(Request $request)
     {
         // Demo form to show all potential
-        // DO NOT DISABLE "csrf_protection" @home : it's only to not have the warning message in the demo
+        // DO NOT DISABLE "csrf_protection" @home : it's only to avoid the warning message in the demo
         $form = $this->createForm(new KitchensinkType(), null, array('csrf_protection' => false));
         $form->submit(array());
         $form->addError(new FormError('This is a global form error message.'));
