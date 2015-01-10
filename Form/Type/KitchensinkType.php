@@ -71,9 +71,7 @@ class KitchensinkType extends AbstractType
                 'multiple' => false,
                 'expanded' => false,
             ))
-            ->add('checkbox', 'checkbox', array(
-                'constraints' => new Assert\NotBlank(),
-            ))
+            ->add('checkbox', 'checkbox', array())
             ->add('radio', 'radio', array())
             ->add('country', 'country')
             ->add('language', 'language')
@@ -90,8 +88,7 @@ class KitchensinkType extends AbstractType
                 'constraints' => new Assert\True(),
             ))
             ->add('time_single_text', 'time', array(
-                'widget' => 'single_text',
-                'constraints' => new Assert\NotBlank(),
+                'widget' => 'single_text'
             ))
             ->add('birthday', 'birthday', array(
                 'constraints' => new Assert\True(),
