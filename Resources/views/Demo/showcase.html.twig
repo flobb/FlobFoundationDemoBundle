@@ -1,135 +1,127 @@
-{% extends '::base.html.twig' %}
-{% form_theme form 'FlorianBelhommeFoundationBundle:Form:foundation_form_div_layout.html.twig' %}
+{% extends 'FlobFoundationDemoBundle::base.html.twig' %}
+{% form_theme form 'FlobFoundationBundle:Form:foundation_form_div_layout.html.twig' %}
 
-{% block title %}Foundation Bundle Showcase{% endblock %}
+{% set version_foundation = '5.5.0' %}
+{% set version_font_awesome = '4.2.0' %}
+{% set version_modernizr = '2.8.3' %}
+{% set version_jquery = '2.1.3' %}
+
+{% block bodyclass %}antialiased hide-extras{% endblock %}
+
+{% block title %}FlobFoundationBundle Showcase{% endblock %}
 
 {% block stylesheets %}
 
+    {# Additionnal meta #}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     {# Add the CSS from CDN #}
-    {% stylesheets
-    '//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.1/css/normalize.min.css'
-    '//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.1/css/foundation.min.css'
-    '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css'
-    %}
-    <link rel="stylesheet" href="{{ asset_url }}" />
-    {% endstylesheets %}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/{{ version_foundation }}/css/normalize.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/{{ version_foundation }}/css/foundation.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/{{ version_font_awesome }}/css/font-awesome.min.css" />
 
     {# Add the CSS from Bundles #}
     {% stylesheets
-    '@FlorianBelhommeFoundationBundle/Resources/public/css/foundationtosymfony.css'
-    '@FlorianBelhommeFoundationDemoBundle/Resources/public/css/showcase.css'
+    '@FlobFoundationBundle/Resources/public/css/*'
+    '@FlobFoundationDemoBundle/Resources/public/css/*'
     %}
     <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
 
-    {# Special js lib to be loaded in the head #}
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
+    {# Js lib to be loaded in the head #}
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/{{ version_modernizr }}/modernizr.min.js"></script>
 
 {% endblock %}
 
 {% block body %}
 
-    <nav class="top-bar" data-topbar>
+    <nav role="navigation" class="top-bar" data-topbab>
         <ul class="title-area">
-            <li class="name">
-                <h1><a href="/">FoundationBundle</a></h1>
-            </li>
-            <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+            <li class="name"><h1><a href="#">FlobFoundationBundle</a></h1></li>
+            <li class="toggle-topbar menu-icon"><a href=""><span></span></a></li>
         </ul>
+
         <section class="top-bar-section">
             <ul class="right">
-                <li><a href="https://github.com/florianbelhomme/FoundationBundle">The bundle on Github</a></li>
-                <li><a href="florianbelhomme.com">About me</a>
+                <li class="divider"></li>
+                <li><a href="https://github.com/florianbelhomme/FlobFoundationBundle">The bundle on GitHub</a></li>
+                <li class="divider"></li>
+                <li><a href="http://florianbelhomme.com">About me</a></li>
             </ul>
         </section>
     </nav>
 
-    <div class="row full-width">
-
-        <div class="large-3 medium-4 columns">
-            <div class="hide-for-small">
-                <div class="sidebar">
-                    <nav>
-                        <ul class="side-nav">
-                            <li class="heading">This page is only<br />a quick demo</li>
-                            <li class="divider"></li>
-                            <li class="heading">Documentation</li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#started">Getting Started</a></li>
-                            <li><a href="#usage">Common usage</a></li>
-                            <li class="divider"></li>
-                            <li class="heading">Kitchen Sink / Demo</li>
-                            <li><a href="#menus">Menus & sidebar</a></li>
-                            <li><a href="#pagination">Pagination</a></li>
-                            <li><a href="#forms">Form</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+    <div class="row" id="menus">
+        <div class="small-12 columns">
+            <h3>Menu</h3>
+            <p>TEST.</p>
+            <h4>Twig</h4>
+            <script src="https://gist.github.com/florianbelhomme/372f54ee1b4edf2fd10b.js"></script>
+            <h4>Rendered HTML</h4>
+            {# The template is optional, there is a option in the configuration to use it by default #}
+            {{ knp_menu_render('FlobFoundationDemoBundle:DemoMenuBuilder:topMenu', { template: 'FlobFoundationBundle:Menu:foundation_knp_menu.html.twig' }) }}
+            <hr>
         </div>
+    </div>
 
-        <div class="large-9 medium-8 columns">
-
-            <div class="row" id="about">
-                <div class="large-12 columns">
-                    <h3>About</h3>
-                    <p>
-                        This bundle integrates the functionnalities of the responsive framework Foundation, from Zurb (thanks guys), into Symfony2 by providing templates, Twig extensions, services and commands. You can quickly setup a responsive theme for an interface for your projet. It will have the "look'n'feel", the responsiveness and the simplicity of Foundation.<br />
-                        <b>BE AWARE: THIS BUNDLE WILL NOT ADD THE FOUNDATION FRAMEWORK BUT RATHER FUNCTIONNALITIES FOR SYMFONY TO WORK WITH IT</b><br />
-                        To include Foundation, jQuery, Normalize & Modernizer you can use the CloudFlare CDN. This bundle uses icons from Font Awesome. To add it, you can use the bootstrapcdn.
-                    </p>
+    <div class="row" id="pagination">
+        <div class="small-12 columns">
+            <h3>Pagination</h3>
+            <p>Templates are provided that support KNP Paginator & PagerFanta.</p>
+            <div class="row">
+                <div class="small-8 columns">
+                    <h4>Twig</h4>
+                    <script src="https://gist.github.com/florianbelhomme/dd375cf9a0418a4d46ba.js"></script>
+                </div>
+                <div class="small-4 columns">
+                    <h4>Rendered HTML</h4>
+                    {# The template is optional, there is a option in the configuration to use it by default #}
+                    {{ knp_pagination_render(pagination, 'FlobFoundationBundle:Pagination:foundation_sliding.html.twig') }}
                 </div>
             </div>
+            <hr>
+        </div>
+    </div>
 
-            <div class="row" id="started">
-                <div class="large-12 columns">
-                    <h3>Getting Started</h3>
-                    <p>
-                        If you have planned to use the KNP Menu bundle or the KNP Pagination bundle, make sure you have declared them before the Foundation bundle in AppKernel.php.<br />
-                        Add the "florianbelhomme/foundation-bundle" in your Symfony2 project. For detailed installation instructions or issues, please visit <a href="https://github.com/florianbelhomme/FoundationBundle">the bundle on Github (https://github.com/florianbelhomme/FoundationBundle)</a><br />
-                        Your project is ready!
-                    </p>
+    <div class="row" id="alerts">
+        <div class="small-12 columns">
+            <h3>Alerts</h3>
+            <p>With a embed template, you can quickly add the alert box markup.</p>
+            <div class="row">
+                <div class="small-8 columns">
+                    <h4>Twig</h4>
+                    <script src="https://gist.github.com/florianbelhomme/504bf3eee6a183ca19ad.js"></script>
+                </div>
+                <div class="small-4 columns">
+                    <h4>Rendered HTML</h4>
+                    {% embed 'FlobFoundationBundle:Content:alert.html.twig' %}
+                        {% block body %}
+                            This is a default alert box.
+                        {% endblock %}
+                    {% endembed %}
+                    {% embed 'FlobFoundationBundle:Content:alert.html.twig' with { class: 'alert round' } %}
+                        {% block body %}
+                            This is a rounded alert box.
+                        {% endblock %}
+                    {% endembed %}
+                    {% embed 'FlobFoundationBundle:Content:alert.html.twig' with { class: 'info radius' } %}
+                        {% block body %}
+                            This is an info alert with a radius.
+                        {% endblock %}
+                    {% endembed %}
                 </div>
             </div>
+            <hr>
+        </div>
+    </div>
 
-            <div class="row" id="usage">
-                <div class="large-12 columns">
-                    <h3>Common usage</h3>
-                    <p>
-                        If you want to theme all your project with Foundation, the easiest way is to go into the app/config/config.yml and add at the end :<br />
-                        fb_foundation:<br />
-                        theme: { form: true, knp_menu: true, knp_paginator: true }
-                    </p>
-                    <p>(But you can also theme specific elements, look into the bundle's readme for explainations)</p>
-                </div>
-            </div>
-
-            <div class="row" id="menus">
-                <div class="large-12 columns">
-                    <h3>Menus & sidebar (Using KNP Menu)</h3>
-                    <h4>Top menu</h4>
-                    {{ knp_menu_render('topmenu', {'template' : 'FlorianBelhommeFoundationBundle:Menu:foundation_knp_menu.html.twig'}) }} <br>
-                    <h4>Side menu</h4>
-                    {{ knp_menu_render('sidebar', {'template' : 'FlorianBelhommeFoundationBundle:Menu:foundation_knp_menu.html.twig'}) }} <br>
-                    <h4>Breadcrumb (auto-generated from top menu)</h4>
-                    {{ fbfb_breadcrumb_render('topmenu') }}
-                </div>
-            </div>
-
-            <div class="row" id="pagination">
-                <div class="large-12 columns">
-                    <h3>Pagination (Using KNP Paginator)</h3>
-                    {{ knp_pagination_render(pagination, 'FlorianBelhommeFoundationBundle:Pagination:foundation_sliding.html.twig') }}
-                </div>
-            </div>
-
-            <div class="row" id="forms">
-                <div class="large-12 columns">
-                    <h3>Form (generated by SF2)</h3>
-                    {{ form(form) }}
-                </div>
-            </div>
-
+    <div class="row" id="forms">
+        <div class="small-12 columns">
+            <h3>Form</h3>
+            <p>A vertical form template manage the display of the fields and errors. Two new widget are provided, the slider and the switch.</p>
+            <h4>Rendered HTML</h4>
+            {{ form(form) }}
+            <hr>
         </div>
     </div>
 
@@ -137,17 +129,13 @@
 
 {% block javascripts %}
 
-    {# Add the JS from CDN #}
-    {% javascripts
-    '//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'
-    '//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.1/js/foundation.min.js'
-    %}
-    <script type="text/javascript" src="{{ asset_url }}"></script>
-    {% endjavascripts %}
+{# Add the JS from CDN #}
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/{{ version_jquery }}/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/foundation/{{ version_foundation }}/js/foundation.min.js"></script>
 
     {# Add the JS from Bundles #}
     {% javascripts
-    '@FlorianBelhommeFoundationBundle/Resources/public/js/foundationtosymfony.js'
+    '@FlobFoundationBundle/Resources/public/js/*'
     %}
     <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
