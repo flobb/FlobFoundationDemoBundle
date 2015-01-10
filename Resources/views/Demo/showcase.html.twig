@@ -51,96 +51,77 @@
         </section>
     </nav>
 
-    <div class="row">
-        <div class="large-3 medium-4 columns">
-
-            <div class="hide-for-small">
-                <div class="sidebar">
-                    <nav>
-                        <ul class="side-nav">
-                            <li class="heading">This page is only a quick demo</li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#started">Getting Started</a></li>
-                            <li class="heading">Documentation</li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#started">Getting Started</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-
+    <div class="row" id="menus">
+        <div class="small-12 columns">
+            <h3>Menu</h3>
+            <p>TEST.</p>
+            <h4>Twig</h4>
+            <script src="https://gist.github.com/florianbelhomme/372f54ee1b4edf2fd10b.js"></script>
+            <h4>Rendered HTML</h4>
+            {# The template is optional, there is a option in the configuration to use it by default #}
+            {{ knp_menu_render('FlobFoundationDemoBundle:DemoMenuBuilder:topMenu', { template: 'FlobFoundationBundle:Menu:foundation_knp_menu.html.twig' }) }}
+            <hr>
         </div>
-        <div class="large-9 medium-8 columns">
+    </div>
 
-            <div class="row" id="">
-                <div class="large-12 columns">
-                    <h3>Pagination</h3>
-                    <p>Templates are provided that support KNP Paginator & PagerFanta.</p>
+    <div class="row" id="pagination">
+        <div class="small-12 columns">
+            <h3>Pagination</h3>
+            <p>Templates are provided that support KNP Paginator & PagerFanta.</p>
+            <div class="row">
+                <div class="small-8 columns">
                     <h4>Twig</h4>
                     <script src="https://gist.github.com/florianbelhomme/dd375cf9a0418a4d46ba.js"></script>
+                </div>
+                <div class="small-4 columns">
                     <h4>Rendered HTML</h4>
                     {# The template is optional, there is a option in the configuration to use it by default #}
                     {{ knp_pagination_render(pagination, 'FlobFoundationBundle:Pagination:foundation_sliding.html.twig') }}
-                    <hr>
                 </div>
             </div>
+            <hr>
+        </div>
+    </div>
 
-            <div class="row" id="">
-                <div class="large-12 columns">
-                    <h3>Menu</h3>
-                    <p>TEST.</p>
+    <div class="row" id="alerts">
+        <div class="small-12 columns">
+            <h3>Alerts</h3>
+            <p>With a embed template, you can quickly add the alert box markup.</p>
+            <div class="row">
+                <div class="small-8 columns">
                     <h4>Twig</h4>
-                    <script src="https://gist.github.com/florianbelhomme/372f54ee1b4edf2fd10b.js"></script>
+                    <script src="https://gist.github.com/florianbelhomme/504bf3eee6a183ca19ad.js"></script>
+                </div>
+                <div class="small-4 columns">
                     <h4>Rendered HTML</h4>
-                    {# The template is optional, there is a option in the configuration to use it by default #}
-                    has-dropdown
-                    {{ knp_menu_render('FlobFoundationDemoBundle:DemoMenuBuilder:topMenu', { template: 'FlobFoundationBundle:Menu:foundation_knp_menu.html.twig' }) }}
-                    <hr>
+                    {% embed 'FlobFoundationBundle:Content:alert.html.twig' %}
+                        {% block body %}
+                            This is a default alert box.
+                        {% endblock %}
+                    {% endembed %}
+                    {% embed 'FlobFoundationBundle:Content:alert.html.twig' with { class: 'alert round' } %}
+                        {% block body %}
+                            This is a rounded alert box.
+                        {% endblock %}
+                    {% endembed %}
+                    {% embed 'FlobFoundationBundle:Content:alert.html.twig' with { class: 'info radius' } %}
+                        {% block body %}
+                            This is an info alert with a radius.
+                        {% endblock %}
+                    {% endembed %}
                 </div>
             </div>
+            <hr>
+        </div>
+    </div>
 
-            <div class="row" id="">
-                <div class="large-12 columns">
-                    <h3>Alerts</h3>
-                    <p>With a embed template, you can quickly add the alert box markup.</p>
-                    <div class="row">
-                        <div class="large-6 columns">
-                            <h4>Twig</h4>
-                            <script src="https://gist.github.com/florianbelhomme/504bf3eee6a183ca19ad.js"></script>
-                        </div>
-                        <div class="large-6 columns">
-                            <h4>Rendered HTML</h4>
-                            {% embed 'FlobFoundationBundle:Content:alert.html.twig' %}
-                                {% block body %}
-                                    This is a default alert box.
-                                {% endblock %}
-                            {% endembed %}
-                            {% embed 'FlobFoundationBundle:Content:alert.html.twig' with { class: 'alert round' } %}
-                                {% block body %}
-                                    This is a rounded alert box.
-                                {% endblock %}
-                            {% endembed %}
-                            {% embed 'FlobFoundationBundle:Content:alert.html.twig' with { class: 'info radius' } %}
-                                {% block body %}
-                                    This is an info alert with a radius.
-                                {% endblock %}
-                            {% endembed %}
-                        </div>
-                    </div>
-                    <hr>
-                </div>
-            </div>
-
-            <div class="row" id="forms">
-                <div class="large-12 columns">
-                    <h3>Form</h3>
-                    <p>A vertical form template manage the display of the fields and errors. Two new widget are provided, the slider and the switch.</p>
-                    <h4>Rendered HTML</h4>
-                    {{ form(form) }}
-                    <hr>
-                </div>
-            </div>
-
+    <div class="row" id="forms">
+        <div class="small-12 columns">
+            <h3>Form</h3>
+            <p>A vertical form template manage the display of the fields and errors. Two new widget are provided, the slider and the switch.</p>
+            <h4>Rendered HTML</h4>
+            {{ form(form) }}
+            <hr>
         </div>
     </div>
 
@@ -148,7 +129,7 @@
 
 {% block javascripts %}
 
-    {# Add the JS from CDN #}
+{# Add the JS from CDN #}
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/{{ version_jquery }}/jquery.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/foundation/{{ version_foundation }}/js/foundation.min.js"></script>
 

@@ -46,19 +46,19 @@ class KitchensinkType extends AbstractType
                 'choices' => $choices,
                 'multiple' => true,
                 'expanded' => true,
-                'label_attr' => array('class' => 'checkbox-inline')
+                'label_attr' => array('class' => 'checkbox-inline'),
             ))
             ->add('choice1C', 'choice', array(
                 'choices' => $choices,
                 'multiple' => true,
                 'expanded' => true,
                 'label' => false,
-                'label_attr' => array('class' => 'checkbox-inline')
+                'label_attr' => array('class' => 'checkbox-inline'),
             ))
             ->add('choice2', 'choice', array(
                 'choices' => $choices,
                 'multiple' => false,
-                'expanded' => true
+                'expanded' => true,
             ))
             ->add('choice3', 'choice', array(
                 'choices' => $choices,
@@ -69,7 +69,7 @@ class KitchensinkType extends AbstractType
             ->add('choice4', 'choice', array(
                 'choices' => $choices,
                 'multiple' => false,
-                'expanded' => false
+                'expanded' => false,
             ))
             ->add('checkbox', 'checkbox', array(
                 'constraints' => new Assert\NotBlank(),
@@ -81,10 +81,10 @@ class KitchensinkType extends AbstractType
             ->add('timezone', 'timezone', array())
             ->add('date', 'date', array())
             ->add('date_single_text', 'date', array(
-                'widget' => 'single_text'))
+                'widget' => 'single_text', ))
             ->add('datetime', 'datetime', array())
             ->add('datetime_single_text', 'datetime', array(
-                'widget' => 'single_text'
+                'widget' => 'single_text',
             ))
             ->add('time', 'time', array(
                 'constraints' => new Assert\True(),
