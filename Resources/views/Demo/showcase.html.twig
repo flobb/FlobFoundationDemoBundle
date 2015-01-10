@@ -72,30 +72,34 @@
         </div>
         <div class="large-9 medium-8 columns">
 
-            <div class="row" id="forms">
+            <div class="row" id="">
                 <div class="large-12 columns">
                     <h3>Pagination</h3>
                     <p>Templates are provided that support KNP Paginator & PagerFanta.</p>
-                    <h4>With KNP</h4>
-                    <p>Exemple of the default sliding pagination.</p>
-                    <div class="row">
-                        <div class="large-6 columns">
-                            <h4>Twig</h4>
-                            <script src="https://gist.github.com/florianbelhomme/dd375cf9a0418a4d46ba.js"></script>
-                        </div>
-                        <div class="large-6 columns">
-                            <h4>Rendered HTML</h4>
-                            {# The template is optional, there is a option in the configuration to use it by default #}
-                            {{ knp_pagination_render(pagination, 'FlobFoundationBundle:Pagination:foundation_sliding.html.twig') }}
-                        </div>
-                    </div>
-                    <h4>With PagerFanta</h4>
-                    <p>Exemple of the default sliding pagination.</p>
+                    <h4>Twig</h4>
+                    <script src="https://gist.github.com/florianbelhomme/dd375cf9a0418a4d46ba.js"></script>
+                    <h4>Rendered HTML</h4>
+                    {# The template is optional, there is a option in the configuration to use it by default #}
+                    {{ knp_pagination_render(pagination, 'FlobFoundationBundle:Pagination:foundation_sliding.html.twig') }}
                     <hr>
                 </div>
             </div>
 
-            <div class="row" id="forms">
+            <div class="row" id="">
+                <div class="large-12 columns">
+                    <h3>Menu</h3>
+                    <p>TEST.</p>
+                    <h4>Twig</h4>
+                    <script src="https://gist.github.com/florianbelhomme/372f54ee1b4edf2fd10b.js"></script>
+                    <h4>Rendered HTML</h4>
+                    {# The template is optional, there is a option in the configuration to use it by default #}
+                    has-dropdown
+                    {{ knp_menu_render('FlobFoundationDemoBundle:DemoMenuBuilder:topMenu', { template: 'FlobFoundationBundle:Menu:foundation_knp_menu.html.twig' }) }}
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row" id="">
                 <div class="large-12 columns">
                     <h3>Alerts</h3>
                     <p>With a embed template, you can quickly add the alert box markup.</p>
