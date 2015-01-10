@@ -1,19 +1,1 @@
 services:
-
-    fbfdb.menu_builder:
-        class: Flob\Bundle\FoundationDemoBundle\Menu\MenuBuilder
-        arguments: [@knp_menu.factory]
-
-    fbfdb.menu.topmenu:
-        class: Knp\Menu\Item
-        factory_service: fbfdb.menu_builder
-        factory_method: createTopMenu
-        tags:
-            - { name: knp_menu.menu, alias: topmenu }
-
-    fbfdb.menu.sidebar:
-        class: Knp\Menu\Item
-        factory_service: fbfdb.menu_builder
-        factory_method: createSidebar
-        tags:
-            - { name: knp_menu.menu, alias: sidebar }
