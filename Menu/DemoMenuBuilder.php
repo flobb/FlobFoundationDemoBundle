@@ -45,7 +45,7 @@ class DemoMenuBuilder
         $user->addChild('Sub item 2', array('route' => 'showcase_level1'));
         $user->addChild('Sub item 3', array('route' => 'showcase_level1'));
         $menu->addChild($user);
-
+dump($menu);die();
         return $menu;
     }
 
