@@ -6,7 +6,7 @@ use Knp\Menu\FactoryInterface;
 
 class DemoMenuBuilder
 {
-    public function topMenu(FactoryInterface $factory, array $options)
+    public function main(FactoryInterface $factory, array $options)
     {
         $menu = $factory->createItem('Home', array('route' => 'showcase_homepage', 'extras' => array('menu_type' => 'topmenu')));
 
