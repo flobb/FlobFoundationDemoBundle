@@ -3,8 +3,9 @@
 namespace Flob\Bundle\FoundationDemoBundle\Menu;
 
 use Knp\Menu\FactoryInterface;
+use Symfony\Component\DependencyInjection\ContainerAware;
 
-class DemoMenuBuilder
+class DemoMenuBuilder extends ContainerAware
 {
     public function main(FactoryInterface $factory, array $options)
     {
@@ -45,7 +46,9 @@ class DemoMenuBuilder
         $user->addChild('Sub item 2', array('route' => 'showcase_level1'));
         $user->addChild('Sub item 3', array('route' => 'showcase_level1'));
         $menu->addChild($user);
-dump($menu);die();
+
+        $menu->setCurrentUri($this->container->get('request')->getRequestUri());
+
         return $menu;
     }
 

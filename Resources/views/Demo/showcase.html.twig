@@ -65,15 +65,29 @@
             {# The template is optional, there is a option in the configuration to use it by default #}
             {{ knp_menu_render('FlobFoundationDemoBundle:DemoMenuBuilder:main', { template: 'FlobFoundationBundle:Menu:foundation_knp_menu.html.twig' }) }}
 
-            <h4>Sidebar</h4>
-            <h4>PHP</h4>
-            <script src="https://gist.github.com/florianbelhomme/3ab494027c6a2f5ea4d4.js"></script>
+
+            <h4>Breadcrumb (generated automatically form TopMenu)</h4>
             <h4>Twig</h4>
-            <script src="https://gist.github.com/florianbelhomme/b067f243eb1840b3e10c.js"></script>
+            <script src="https://gist.github.com/florianbelhomme/372f54ee1b4edf2fd10b.js"></script>
             <h4>Rendered HTML</h4>
             {# The template is optional, there is a option in the configuration to use it by default #}
-            {{ knp_menu_render('FlobFoundationDemoBundle:DemoMenuBuilder:sidebar', { template: 'FlobFoundationBundle:Menu:foundation_knp_menu.html.twig' }) }}
+            {{ flob_breadcrumb_render('FlobFoundationDemoBundle:DemoMenuBuilder:main', { template: 'FlobFoundationBundle:Menu:foundation_breadcrumb.html.twig' }) }}
 
+
+            <h4>Sidebar</h4>
+            <div class="row">
+                <div class="small-8 columns">
+                    <h4>PHP</h4>
+                    <script src="https://gist.github.com/florianbelhomme/3ab494027c6a2f5ea4d4.js"></script>
+                    <h4>Twig</h4>
+                    <script src="https://gist.github.com/florianbelhomme/b067f243eb1840b3e10c.js"></script>
+                </div>
+                <div class="small-4 columns">
+                    <h4>Rendered HTML</h4>
+                    {# The template is optional, there is a option in the configuration to use it by default #}
+                    {{ knp_menu_render('FlobFoundationDemoBundle:DemoMenuBuilder:sidebar', { template: 'FlobFoundationBundle:Menu:foundation_knp_menu.html.twig' }) }}
+                </div>
+            </div>
             <hr>
         </div>
     </div>
