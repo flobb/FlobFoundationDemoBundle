@@ -106,6 +106,7 @@ class KitchensinkType extends AbstractType
                 'start' => 10,
                 'end' => 20,
                 'step' => 2,
+                'constraints' => new Assert\NotBlank(),
             ))
             ->add('slider_v', 'slider', array(
                 'label' => 'Slider (vertical)',
@@ -118,6 +119,7 @@ class KitchensinkType extends AbstractType
                 'label' => 'Switches (as radio)',
                 'choices' => $choices,
                 'multiple' => false,
+                'constraints' => new Assert\NotBlank(),
             ))
             ->add('switch_checkboxes', 'switch', array(
                 'label' => 'Switches (as checkboxes)',
