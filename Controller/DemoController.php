@@ -2,6 +2,8 @@
 
 namespace Flob\Bundle\FoundationDemoBundle\Controller;
 
+use Pagerfanta\Adapter\ArrayAdapter;
+use Pagerfanta\Pagerfanta;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\FormError;
 use Symfony\Component\HttpFoundation\Request;
@@ -19,12 +21,16 @@ class DemoController extends Controller
         $form->addError(new FormError('This is another global form error message.'));
 
         // KNP paginator
-        $paginator = $this->get('knp_paginator');
-        $pagination = $paginator->paginate(range(0, 100), $request->query->get('page', 1), 10);
+        $paginationKnp = $this->get('knp_paginator')->paginate(range(0, 100), (int)$request->query->get('page', 1), 10);
+
+        // PagerFanta
+        $pagerFanta = new Pagerfanta(new ArrayAdapter(range(0, 100)));
+        $pagerFanta->setCurrentPage((int)$request->query->get('page', 1));
 
         return $this->render('FlobFoundationDemoBundle:Demo:showcase.html.twig', array(
-            'form'          => $form->createView(),
-            'pagination'    => $pagination,
+            'form'              => $form->createView(),
+            'paginationKnp'     => $paginationKnp,
+            'paginationFanta'   => $pagerFanta,
         ));
     }
 }
