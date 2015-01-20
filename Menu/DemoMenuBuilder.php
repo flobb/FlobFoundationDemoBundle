@@ -47,8 +47,6 @@ class DemoMenuBuilder extends ContainerAware
         $user->addChild('Sub item 3', array('route' => 'showcase_level1'));
         $menu->addChild($user);
 
-        $menu->setCurrentUri($this->container->get('request')->getRequestUri());
-
         return $menu;
     }
 

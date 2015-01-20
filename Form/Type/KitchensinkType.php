@@ -88,7 +88,7 @@ class KitchensinkType extends AbstractType
                 'constraints' => new Assert\True(),
             ))
             ->add('time_single_text', 'time', array(
-                'widget' => 'single_text'
+                'widget' => 'single_text',
             ))
             ->add('birthday', 'birthday', array(
                 'constraints' => new Assert\True(),
