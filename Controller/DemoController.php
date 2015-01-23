@@ -21,11 +21,11 @@ class DemoController extends Controller
         $form->addError(new FormError('This is another global form error message.'));
 
         // KNP paginator
-        $paginationKnp = $this->get('knp_paginator')->paginate(range(0, 100), (int)$request->query->get('page', 1), 10);
+        $paginationKnp = $this->get('knp_paginator')->paginate(range(0, 100), (int) $request->query->get('page', 1), 10);
 
         // PagerFanta
         $pagerFanta = new Pagerfanta(new ArrayAdapter(range(0, 100)));
-        $pagerFanta->setCurrentPage((int)$request->query->get('page', 1));
+        $pagerFanta->setCurrentPage((int) $request->query->get('page', 1));
 
         return $this->render('FlobFoundationDemoBundle:Demo:showcase.html.twig', array(
             'form'              => $form->createView(),
