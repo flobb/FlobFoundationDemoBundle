@@ -43,6 +43,9 @@
 
         <section class="top-bar-section">
             <ul class="right">
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#pagination">Pagination</a></li>
+                <li><a href="#alert">Alert</a></li>
                 <li class="divider"></li>
                 <li><a href="https://github.com/florianbelhomme/FlobFoundationBundle">The bundle on GitHub</a></li>
                 <li class="divider"></li>
@@ -51,26 +54,53 @@
         </section>
     </nav>
 
-    <div class="row" id="menus">
+    <div class="row section" id="start">
         <div class="small-12 columns">
-            <h3>Menu</h3>
-            <p>TEST.</p>
+
+            <h1>FlobFoundationBundle</h1>
+
+            <h4 class="subheader">
+                This page is a demo of the functionalities of the <a href="https://github.com/florianbelhomme/FlobFoundationBundle">FlobFoundationBundle</a>.
+            </h4>
+
+            <hr>
+
+        </div>
+    </div>
+
+    <div class="row section" id="menu">
+        <div class="small-12 columns">
+
+            <h1>Menu</h1>
+            <h4 class="subheader">
+                You can give a Foundation's look to your menu.
+                The bundle can theme the menu of <a href="https://github.com/KnpLabs/KnpMenuBundle">KnpMenuBundle</a>.
+                The bundle manage breadcrumbs from a menu.<br />
+                With the example below, try some of the links, the menu and the breadcrumb will be updated.
+            </h4>
+
+            <hr>
 
             <h4>TopMenu</h4>
-            <h4>PHP</h4>
+            <h5>PHP</h5>
             <script src="https://gist.github.com/florianbelhomme/1670b30d4a86d214ac32.js"></script>
-            <h4>Twig</h4>
+            <h5>Twig</h5>
             <script src="https://gist.github.com/florianbelhomme/372f54ee1b4edf2fd10b.js"></script>
-            <h4>Rendered HTML</h4>
+            <h5>Rendered HTML</h5>
             {# The template is optional, there is a option in the configuration to use it by default #}
             {{ knp_menu_render('FlobFoundationDemoBundle:DemoMenuBuilder:main', { template: 'FlobFoundationBundle:Menu:foundation_knp_menu.html.twig' }) }}
+            <p>&nbsp;</p>
+
+            <hr>
 
             <h4>Breadcrumb (generated automatically from TopMenu)</h4>
-            <h4>Twig</h4>
+            <h5>Twig</h5>
             <script src="https://gist.github.com/florianbelhomme/7ec59bd82da07fe9fbb5.js"></script>
-            <h4>Rendered HTML</h4>
+            <h5>Rendered HTML</h5>
             {# The template is optional, there is a option in the configuration to use it by default #}
             {{ flob_breadcrumb_render('FlobFoundationDemoBundle:DemoMenuBuilder:main', { template: 'FlobFoundationBundle:Menu:foundation_breadcrumb.html.twig' }) }}
+
+            <hr>
 
             <h4>Sidebar</h4>
             <div class="row">
@@ -86,15 +116,24 @@
                     {{ knp_menu_render('FlobFoundationDemoBundle:DemoMenuBuilder:sidebar', { template: 'FlobFoundationBundle:Menu:foundation_knp_menu.html.twig' }) }}
                 </div>
             </div>
-            <hr>
         </div>
     </div>
 
-    <div class="row" id="pagination">
+    <div class="row section" id="pagination">
         <div class="small-12 columns">
-            <h3>Pagination</h3>
-            <p>Templates are provided that support KNP Paginator & PagerFanta.</p>
-            <h4>KNP Paginator</h4>
+
+            <h1>Pagination</h1>
+
+            <h4 class="subheader">
+                This bundle support two different pagination system :
+                <a href="https://github.com/KnpLabs/KnpPaginatorBundle">KnpPaginatorBundle</a>
+                and PagerFanta (through <a href="https://github.com/whiteoctober/WhiteOctoberPagerfantaBundle">WhiteOctoberPagerfantaBundle</a>).<br />
+                With the example below, try some of the links, the pagination will be updated.
+            </h4>
+
+            <hr>
+
+            <h4>Knp Paginator</h4>
             <div class="row">
                 <div class="small-8 columns">
                     <h4>Twig</h4>
@@ -106,7 +145,7 @@
                     {{ knp_pagination_render(paginationKnp, 'FlobFoundationBundle:Pagination:foundation_sliding.html.twig') }}
                 </div>
             </div>
-            <h4>PagerFanta</h4>
+            <h4>PagerFanta (through WhiteOctoberPagerfantaBundle)</h4>
             <div class="row">
                 <div class="small-8 columns">
                     <h4>Twig</h4>
@@ -117,14 +156,22 @@
                     {{ pagerfanta(paginationFanta, 'foundation') }}
                 </div>
             </div>
-            <hr>
         </div>
     </div>
 
-    <div class="row" id="alerts">
+    <div class="row section" id="alert">
         <div class="small-12 columns">
-            <h3>Alerts</h3>
-            <p>With a embed template, you can quickly add the alert box markup.</p>
+
+            <h1>Alerts</h1>
+
+            <h4 class="subheader">
+                To make alert's display easier, this bundle provide you a template that can embed your HTML
+                in the markup of Foundation.
+                You have a "class" option to change the colors and the corners of the box.
+            </h4>
+
+            <hr>
+
             <div class="row">
                 <div class="small-8 columns">
                     <h4>Twig</h4>
@@ -149,17 +196,38 @@
                     {% endembed %}
                 </div>
             </div>
-            <hr>
         </div>
     </div>
 
-    <div class="row" id="forms">
+    <div class="row section" id="form">
         <div class="small-12 columns">
-            <h3>Form</h3>
-            <p>A vertical form template manage the display of the fields and errors. Two new widget are provided, the slider and the switch.</p>
+
+            <h1>Form</h1>
+
+            <h4 class="subheader">
+                A vertical form template manage the display of the fields and errors.<br>
+                New widgets are available :
+                <ul>
+                    <li>slider</li>
+                    <li>switch (work alone, as checkboxes or as radio buttons</li>
+                    <li>buttons group</li>
+                    <li>buttons bar</li>
+                </ul>
+            </h4>
+
+            <hr>
+
             <h4>Rendered HTML</h4>
             {{ form(form) }}
-            <hr>
+        </div>
+    </div>
+
+    <div class="row section" id="">
+        <div class="small-12 columns">
+
+            <p>Symfony and Foundation got married. They lived happily ever after and had a lot of websites together.</p>
+            <p>End.</p>
+
         </div>
     </div>
 
