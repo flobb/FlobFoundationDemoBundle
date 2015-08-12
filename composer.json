@@ -21,9 +21,9 @@
 		"MIT"
 	],
 	"require" : {
-        "php": ">=5.3.3",
-		"symfony/symfony" : "~2.3",
-        "florianbelhomme/flob-foundation-bundle": "~2.0",
+	    "php": ">=5.3.9",
+		"symfony/symfony" : "~2.7.0",
+        "florianbelhomme/flob-foundation-bundle": "~2.1.0",
         "white-october/pagerfanta-bundle": "~1.0",
         "knplabs/knp-paginator-bundle" : "~2.4",
         "knplabs/knp-menu-bundle" : "~2.0"

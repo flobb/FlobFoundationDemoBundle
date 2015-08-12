@@ -10,25 +10,25 @@ class KitchensinkType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $choices = array('Choice 1', 'Choice 2', 'Obi wan kenobi');
+        $choices = ['Choice 1', 'Choice 2', 'Obi wan kenobi'];
         $builder
-            ->add('text', 'text', array(
+            ->add('text', 'text', [
                 'constraints' => new Assert\NotBlank(),
-                'attr' => array('placeholder' => 'This is a placeholder'),
-            ))
+                'attr' => ['placeholder' => 'This is a placeholder'],
+            ])
             ->add('textarea', 'textarea')
             ->add('email', 'email')
             ->add('integer', 'integer')
-            ->add('money', 'money', array(
+            ->add('money', 'money', [
                 'currency' => 'EUR',
-            ))
+            ])
             ->add(
                 $builder->create('sub-form', 'form')
-                    ->add('subformemail1', 'email', array(
-                        'constraints' => array(new Assert\NotBlank(), new Assert\Email()),
-                        'attr' => array('placeholder' => 'email constraints'),
+                    ->add('subformemail1', 'email', [
+                        'constraints' => [new Assert\NotBlank(), new Assert\Email()],
+                        'attr' => ['placeholder' => 'email constraints'],
                         'label' => 'A custom label : ',
-                    ))
+                    ])
                     ->add('subformtext1', 'text')
             )
             ->add('number', 'number')
@@ -36,190 +36,189 @@ class KitchensinkType extends AbstractType
             ->add('percent', 'percent')
             ->add('search', 'search')
             ->add('url', 'url')
-            ->add('choice1', 'choice', array(
+            ->add('choice1', 'choice', [
                 'choices' => $choices,
                 'multiple' => true,
                 'expanded' => true,
                 'constraints' => new Assert\NotBlank(),
-            ))
-            ->add('choice1B', 'choice', array(
+            ])
+            ->add('choice1B', 'choice', [
                 'choices' => $choices,
                 'multiple' => true,
                 'expanded' => true,
-                'label_attr' => array('class' => 'checkbox-inline'),
-            ))
-            ->add('choice1C', 'choice', array(
+                'label_attr' => ['class' => 'checkbox-inline'],
+            ])
+            ->add('choice1C', 'choice', [
                 'choices' => $choices,
                 'multiple' => true,
                 'expanded' => true,
                 'label' => false,
-                'label_attr' => array('class' => 'checkbox-inline'),
-            ))
-            ->add('choice2', 'choice', array(
+                'label_attr' => ['class' => 'checkbox-inline'],
+            ])
+            ->add('choice2', 'choice', [
                 'choices' => $choices,
                 'multiple' => false,
                 'expanded' => true,
-            ))
-            ->add('choice3', 'choice', array(
+            ])
+            ->add('choice3', 'choice', [
                 'choices' => $choices,
                 'multiple' => true,
                 'expanded' => false,
                 'constraints' => new Assert\NotBlank(),
-            ))
-            ->add('choice4', 'choice', array(
+            ])
+            ->add('choice4', 'choice', [
                 'choices' => $choices,
                 'multiple' => false,
                 'expanded' => false,
-            ))
-            ->add('checkbox', 'checkbox', array())
-            ->add('radio', 'radio', array())
+            ])
+            ->add('checkbox', 'checkbox', [])
+            ->add('radio', 'radio', [])
             ->add('country', 'country')
             ->add('language', 'language')
             ->add('locale', 'locale')
-            ->add('timezone', 'timezone', array())
-            ->add('date', 'date', array())
-            ->add('date_single_text', 'date', array(
-                'widget' => 'single_text', ))
-            ->add('datetime', 'datetime', array())
-            ->add('datetime_single_text', 'datetime', array(
+            ->add('timezone', 'timezone', [])
+            ->add('date', 'date', [])
+            ->add('date_single_text', 'date', [
+                'widget' => 'single_text', ])
+            ->add('datetime', 'datetime', [])
+            ->add('datetime_single_text', 'datetime', [
                 'widget' => 'single_text',
-            ))
-            ->add('time', 'time', array(
-                'constraints' => new Assert\True(),
-            ))
-            ->add('time_single_text', 'time', array(
+            ])
+            ->add('time', 'time', [
+                'constraints' => new Assert\IsTrue(),
+            ])
+            ->add('time_single_text', 'time', [
                 'widget' => 'single_text',
-            ))
-            ->add('birthday', 'birthday', array(
-                'constraints' => new Assert\True(),
-            ))
+            ])
+            ->add('birthday', 'birthday', [
+                'constraints' => new Assert\IsTrue(),
+            ])
             ->add('file', 'file')
-            ->add('password_repeated', 'repeated', array(
+            ->add('password_repeated', 'repeated', [
                 'type' => 'password',
                 'invalid_message' => 'The password fields must match.',
-                'options' => array('required' => true),
-                'first_options' => array('label' => 'Password field with his repeat'),
-                'second_options' => array('label' => 'Repeat Password'),
-            ))
-            ->add('slider_h', 'slider', array(
+                'options' => ['required' => true],
+                'first_options' => ['label' => 'Password field with his repeat'],
+                'second_options' => ['label' => 'Repeat Password'],
+            ])
+            ->add('slider_h', 'slider', [
                 'label' => 'Slider (horizontal)',
                 'start' => 10,
                 'end' => 20,
                 'step' => 2,
-                'constraints' => new Assert\NotBlank(),
-            ))
-            ->add('slider_v', 'slider', array(
+            ])
+            ->add('slider_v', 'slider', [
                 'label' => 'Slider (vertical)',
                 'start' => 10,
                 'end' => 20,
                 'step' => 2,
                 'vertical' => true,
-            ))
-            ->add('switch_radio', 'switch', array(
+            ])
+            ->add('switch_radio', 'switch', [
                 'label' => 'Switches (as radio)',
                 'choices' => $choices,
                 'multiple' => false,
                 'constraints' => new Assert\NotBlank(),
-            ))
-            ->add('switch_checkboxes', 'switch', array(
+            ])
+            ->add('switch_checkboxes', 'switch', [
                 'label' => 'Switches (as checkboxes)',
                 'choices' => $choices,
                 'multiple' => true,
-            ))
-            ->add('button_group', 'button_group', array(
+            ])
+            ->add('button_group', 'button_group', [
                 'label' => 'Buttons group',
-                'buttons' => array(
-                    'back' => array(
-                        'type'    => 'button',
-                        'options' => array(
+                'buttons' => [
+                    'back' => [
+                        'type' => 'button',
+                        'options' => [
                             'label' => 'Cancel',
-                            'attr' => array(
+                            'attr' => [
                                 'class' => 'secondary',
-                            ),
-                        ),
-                    ),
-                    'save' => array(
-                        'type'    => 'submit',
-                        'options' => array(
+                            ],
+                        ],
+                    ],
+                    'save' => [
+                        'type' => 'submit',
+                        'options' => [
                             'label' => 'Submit',
-                        ),
-                    ),
-                ),
-                'attr' => array(
+                        ],
+                    ],
+                ],
+                'attr' => [
                     'class' => 'right',
-                ),
-            ))
-            ->add('button_bar', 'button_bar', array(
-                'button_groups' => array(
-                    'button_group_first' => array(
+                ],
+            ])
+            ->add('button_bar', 'button_bar', [
+                'button_groups' => [
+                    'button_group_first' => [
                         'label' => 'Buttons group',
-                        'buttons' => array(
-                            'one' => array(
-                                'type'    => 'submit',
-                                'options' => array(
+                        'buttons' => [
+                            'one' => [
+                                'type' => 'submit',
+                                'options' => [
                                     'label' => 'one',
-                                ),
-                            ),
-                            'two' => array(
-                                'type'    => 'button',
-                                'options' => array(
+                                ],
+                            ],
+                            'two' => [
+                                'type' => 'button',
+                                'options' => [
                                     'label' => 'two',
-                                    'attr' => array(
+                                    'attr' => [
                                         'class' => 'success',
-                                    ),
-                                ),
-                            ),
-                            'three' => array(
-                                'type'    => 'button',
-                                'options' => array(
+                                    ],
+                                ],
+                            ],
+                            'three' => [
+                                'type' => 'button',
+                                'options' => [
                                     'label' => 'three',
-                                    'attr' => array(
+                                    'attr' => [
                                         'class' => 'alert',
-                                    ),
-                                ),
-                            ),
-                        ),
-                        'attr' => array(
+                                    ],
+                                ],
+                            ],
+                        ],
+                        'attr' => [
                             'class' => 'round',
-                        ),
-                    ),
-                    'button_group_second' => array(
+                        ],
+                    ],
+                    'button_group_second' => [
                         'label' => 'Buttons group',
-                        'buttons' => array(
-                            'four' => array(
-                                'type'    => 'button',
-                                'options' => array(
+                        'buttons' => [
+                            'four' => [
+                                'type' => 'button',
+                                'options' => [
                                     'label' => 'four',
-                                    'attr' => array(
+                                    'attr' => [
                                         'class' => 'disabled',
-                                    ),
-                                ),
-                            ),
-                            'five' => array(
-                                'type'    => 'button',
-                                'options' => array(
+                                    ],
+                                ],
+                            ],
+                            'five' => [
+                                'type' => 'button',
+                                'options' => [
                                     'label' => 'five',
-                                    'attr' => array(
+                                    'attr' => [
                                         'class' => 'secondary',
-                                    ),
-                                ),
-                            ),
-                            'six' => array(
-                                'type'    => 'button',
-                                'options' => array(
+                                    ],
+                                ],
+                            ],
+                            'six' => [
+                                'type' => 'button',
+                                'options' => [
                                     'label' => 'six',
-                                    'attr' => array(
+                                    'attr' => [
                                         'class' => 'secondary',
-                                    ),
-                                ),
-                            ),
-                        ),
-                        'attr' => array(
+                                    ],
+                                ],
+                            ],
+                        ],
+                        'attr' => [
                             'class' => 'radius',
-                        ),
-                    ),
-                ),
-            ));
+                        ],
+                    ],
+                ],
+            ]);
     }
 
     public function getName()
