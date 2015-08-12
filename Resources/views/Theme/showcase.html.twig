@@ -1,0 +1,43 @@
+{% extends 'FlobAdminThemeBundle:Page:empty.html.twig' %}
+
+{% set topbar = 'FlobFoundationDemoBundle:ThemeMenuBuilder:topbar' %}
+{% set sidebar = 'FlobFoundationDemoBundle:ThemeMenuBuilder:sidebar' %}
+{% set breadcrumb = 'FlobFoundationDemoBundle:ThemeMenuBuilder:sidebar' %}
+
+{% block content_title -%}
+    sdfsdf <small>Kind of description of what is in the page</small>
+{%- endblock %}
+
+{% block content %}
+    {% embed 'FlobAdminThemeBundle:Panel:basic.html.twig' %}
+        {% block title %}Lorem ipsum{% endblock %}
+        {% block content %}
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In blandit, est sed feugiat vulputate, ligula lacus placerat lorem, et consectetur enim nibh eget risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Morbi tincidunt volutpat dui eget aliquam. Fusce tincidunt at nibh sed fringilla. Cras non fermentum est, in elementum erat. Integer ut purus eu purus semper fringilla sed id velit. Suspendisse mollis libero et sapien viverra gravida. Pellentesque malesuada pellentesque rutrum. Nulla purus justo, egestas vel sapien nec, fringilla elementum ante. Sed vitae augue vehicula lectus facilisis fermentum consequat nec diam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce congue odio eget placerat pretium.</p>
+        {% endblock %}
+    {% endembed %}
+    {% embed 'FlobAdminThemeBundle:Panel:basic.html.twig' %}
+        {% block icon %}fa-cogs{% endblock %}
+        {% block title %}Lorem ipsum{% endblock %}
+        {% block content %}
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In blandit, est sed feugiat vulputate, ligula lacus placerat lorem, et consectetur enim nibh eget risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Morbi tincidunt volutpat dui eget aliquam. Fusce tincidunt at nibh sed fringilla. Cras non fermentum est, in elementum erat. Integer ut purus eu purus semper fringilla sed id velit. Suspendisse mollis libero et sapien viverra gravida. Pellentesque malesuada pellentesque rutrum. Nulla purus justo, egestas vel sapien nec, fringilla elementum ante. Sed vitae augue vehicula lectus facilisis fermentum consequat nec diam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce congue odio eget placerat pretium.</p>
+        {% endblock %}
+    {% endembed %}
+    {% embed 'FlobAdminThemeBundle:Panel:basic.html.twig' %}
+        {% block icon %}fa-car{% endblock %}
+        {% block toolbar %}
+            <ul class="button-group">
+                <li><a href="#" class="button"><i class="fa fa-backward"></i></a></li>
+                <li><a href="#" class="button"><i class="fa fa-play"></i></a></li>
+                <li><a href="#" class="button"><i class="fa fa-pause"></i></a></li>
+                <li><a href="#" class="button"><i class="fa fa-forward"></i></a></li>
+            </ul>
+        {% endblock %}
+        {% block title %}Lorem ipsum{% endblock %}
+        {% block content %}
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In blandit, est sed feugiat vulputate, ligula lacus placerat lorem, et consectetur enim nibh eget risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Morbi tincidunt volutpat dui eget aliquam. Fusce tincidunt at nibh sed fringilla. Cras non fermentum est, in elementum erat. Integer ut purus eu purus semper fringilla sed id velit. Suspendisse mollis libero et sapien viverra gravida. Pellentesque malesuada pellentesque rutrum. Nulla purus justo, egestas vel sapien nec, fringilla elementum ante. Sed vitae augue vehicula lectus facilisis fermentum consequat nec diam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce congue odio eget placerat pretium.</p>
+        {% endblock %}
+    {% endembed %}
+{% endblock %}

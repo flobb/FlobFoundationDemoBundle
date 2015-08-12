@@ -1,10 +1,10 @@
 {% extends '::base.html.twig' %}
 {% form_theme form 'FlobFoundationBundle:Form:foundation_form_div_layout.html.twig' %}
 
-{% set version_foundation = '5.5.0' %}
-{% set version_font_awesome = '4.2.0' %}
+{% set version_foundation = '5.5.2' %}
+{% set version_font_awesome = '4.4.0' %}
 {% set version_modernizr = '2.8.3' %}
-{% set version_jquery = '2.1.3' %}
+{% set version_jquery = '2.1.4' %}
 
 {% block bodyclass %}antialiased hide-extras{% endblock %}
 
@@ -14,6 +14,8 @@
 
     {# Additionnal meta #}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This page is a demo for the features of Zurb Foundation and Symfony2.">
+    <meta name="keywords" content="zurb,foundation,symfony,bundle">
 
     {# Add the CSS from CDN #}
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/{{ version_foundation }}/css/normalize.min.css" />
@@ -60,12 +62,14 @@
     <div class="row section" id="start">
         <div class="small-12 columns">
 
-            <h1>FlobFoundationBundle</h1>
-
+            <h1>Zurb Foundation and Symfony</h1>
             <h4 class="subheader">
                 This page is a demo for the features of the <a href="https://github.com/florianbelhomme/FlobFoundationBundle">FlobFoundationBundle</a>.
             </h4>
-
+            <p>
+                It integrates the features of the responsive framework Foundation, from ZURB, into Symfony by providing templates, Twig extensions, services and commands.
+                For example, your form will be rendered automatically with the right style.
+            </p>
             <hr>
 
         </div>
@@ -84,7 +88,7 @@
 
             <hr>
 
-            <h4>TopMenu</h4>
+            <h4>Top Bar</h4>
             <h5>PHP</h5>
             <script src="https://gist.github.com/florianbelhomme/1670b30d4a86d214ac32.js"></script>
             <h5>Twig</h5>
@@ -96,7 +100,7 @@
 
             <hr>
 
-            <h4>Breadcrumb (generated automatically from TopMenu)</h4>
+            <h4>Breadcrumb (generated automatically from the top bar)</h4>
             <h5>Twig</h5>
             <script src="https://gist.github.com/florianbelhomme/7ec59bd82da07fe9fbb5.js"></script>
             <h5>Rendered HTML</h5>
@@ -212,7 +216,7 @@
                 New widgets are available :
                 <ul>
                     <li>slider</li>
-                    <li>switch (work alone, as checkboxes or as radio buttons</li>
+                    <li>switch (work alone, as checkboxes or as radio buttons)</li>
                     <li>buttons group</li>
                     <li>buttons bar</li>
                 </ul>

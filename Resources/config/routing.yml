@@ -9,3 +9,7 @@ showcase_level1:
 showcase_level2:
     path:      /level1/level2/
     defaults:  { _controller: FlobFoundationDemoBundle:Demo:Showcase }
+
+theme_homepage:
+    path:      /theme/
+    defaults:  { _controller: FlobFoundationDemoBundle:Theme:Showcase }

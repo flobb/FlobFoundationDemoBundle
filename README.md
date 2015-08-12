@@ -28,7 +28,7 @@ class AppKernel extends Kernel
 {
     public function registerBundles()
     {
-        $bundles = array(
+        $bundles = [
             ...
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
@@ -38,7 +38,7 @@ class AppKernel extends Kernel
             new Flob\Bundle\FoundationBundle\FlobFoundationBundle(),
             new Flob\Bundle\FoundationDemoBundle\FlobFoundationDemoBundle(),
             ...
-        );
+        ];
     }
 }
 ```
