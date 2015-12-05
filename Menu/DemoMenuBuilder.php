@@ -3,10 +3,12 @@
 namespace Flob\Bundle\FoundationDemoBundle\Menu;
 
 use Knp\Menu\FactoryInterface;
-use Symfony\Component\DependencyInjection\ContainerAware;
+use Symfony\Component\DependencyInjection\ContainerAwareTrait;
 
-class DemoMenuBuilder extends ContainerAware
+class DemoMenuBuilder
 {
+    use ContainerAwareTrait;
+
     public function main(FactoryInterface $factory, array $options)
     {
         $menu = $factory->createItem('Home', ['route' => 'showcase_homepage', 'extras' => ['menu_type' => 'topbar']]);

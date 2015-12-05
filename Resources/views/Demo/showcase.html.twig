@@ -23,12 +23,12 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/{{ version_font_awesome }}/css/font-awesome.min.css" />
 
     {# Add the CSS from Bundles #}
-    {% stylesheets
-    '@FlobFoundationBundle/Resources/public/css/*'
-    '@FlobFoundationDemoBundle/Resources/public/css/*'
-    %}
-    <link rel="stylesheet" href="{{ asset_url }}" />
-    {% endstylesheets %}
+    {% for cssFile in ['foundationtosymfony'] %}
+        <link rel="stylesheet" href="{{ asset('bundles/flobfoundation/css/' ~ cssFile ~ '.css') }}" />
+    {% endfor %}
+    {% for cssFile in ['showcase'] %}
+        <link rel="stylesheet" href="{{ asset('bundles/flobfoundationdemo/css/' ~ cssFile ~ '.css') }}" />
+    {% endfor %}
 
     {# Js lib to be loaded in the head #}
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/{{ version_modernizr }}/modernizr.min.js"></script>
@@ -242,14 +242,12 @@
 
 {% block javascripts %}
 
-{# Add the JS from CDN #}
+    {# Add the JS from CDN #}
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/{{ version_jquery }}/jquery.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/foundation/{{ version_foundation }}/js/foundation.min.js"></script>
 
     {# Add the JS from Bundles #}
-    {% javascripts
-    '@FlobFoundationBundle/Resources/public/js/*'
-    %}
-    <script type="text/javascript" src="{{ asset_url }}"></script>
-    {% endjavascripts %}
+    {% for jsFile in ['foundationtosymfony'] %}
+        <script type="text/javascript" src="{{ asset('bundles/flobfoundation/js/' ~ jsFile ~ '.js') }}"></script>
+    {% endfor %}
 {% endblock %}

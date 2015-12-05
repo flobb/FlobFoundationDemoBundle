@@ -15,7 +15,7 @@ class DemoController extends Controller
     {
         // Demo form to show all potential
         // DO NOT DISABLE "csrf_protection" @home : it's only to avoid the warning message in the demo
-        $form = $this->createForm(new KitchensinkType(), null, ['csrf_protection' => false]);
+        $form = $this->createForm(KitchensinkType::class, null, ['csrf_protection' => false]);
         $form->submit([]);
         $form->addError(new FormError('This is a global form error message.'));
         $form->addError(new FormError('This is another global form error message.'));
